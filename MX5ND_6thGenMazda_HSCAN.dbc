@@ -1,0 +1,444 @@
+VERSION "berumiya 990S labo"
+CM_ "License: CC-BY 4.0";
+CM_ "Repository : https://github.com/berumiya/CAN_DBC_6thGenMazda";
+CM_ "Decoded and maintained by berumiya 990S labo";
+CM_ "Source : reverse-engineered CAN traffic.";
+
+NS_ :
+    NS_DESC_
+    CM_
+    BA_DEF_
+    BA_
+    VAL_
+    CAT_DEF_
+    CAT_
+    FILTER
+    BA_DEF_DEF_
+    EV_DATA_
+    ENVVAR_DATA_
+    SGTYPE_
+    SGTYPE_VAL_
+    BA_DEF_SGTYPE_
+    BA_SGTYPE_
+    SIG_TYPE_REF_
+    VAL_TABLE_
+    SIG_GROUP_
+    SIG_VALTYPE_
+    SIGTYPE_VALTYPE_
+    BO_TX_BU_
+    BA_DEF_REL_
+    BA_REL_
+    BA_DEF_DEF_REL_
+    BU_SG_REL_
+    BU_EV_REL_
+    BU_BO_REL_
+    SG_MUL_VAL_
+
+BS_: 
+BU_: HS_SSU HS_CMU_Maybe HS_BCMM HS_LVL HS_ABS HS_IC HS_RCM HS_EPAS HS_FSC2 HS_PCM HS_EVP HS_DCDC_Maybe HS_MRCC HS_HUD_MZ HS_RHT HS_TCUAT OBD2 LICENSE
+BO_ 145 HS_SSU: 8 HS_SSU
+   SG_ HAZ_SW : 10|1@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ WIP_F_INT : 55|8@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ TURN_SW : 13|2@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ FOG_SW : 1|2@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ RearWiper : 19|2@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ Washer : 17|2@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ FrontWiper : 21|2@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ LIGHT : 7|10@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 70 HS_SSU: 8 HS_SSU
+
+BO_ 80 HS_SSU: 8 HS_SSU
+   SG_ KeyState : 1|2@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ KeyStateInv : 58|3@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 130 HS_SSU: 8 HS_SSU
+
+BO_ 157 HS_SSU: 8 HS_SSU
+   SG_ CRU_CON_SW1 : 7|10@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 628 HS_SSU: 8 HS_SSU
+   SG_ INFO_SW : 61|2@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ Key_hold : 20|1@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ Key_notfound : 36|1@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ IC_Buzz : 7|8@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ Key_Batt : 39|1@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 1154 HS_SSU: 8 HS_SSU
+
+BO_ 1416 HS_SSU: 8 HS_SSU
+
+BO_ 158 HS_IC: 8 HS_IC
+   SG_ Fuel_Tank : 47|8@0+ (0.2,0) [0|1] "L" Vector__XXX
+   SG_ Fuel_Related_2 : 55|8@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 159 HS_IC: 8 HS_IC
+   SG_ PCONSW_Panel_Light_Control_Switch : 15|8@0+ (1,0) [0|1] "%" Vector__XXX
+   SG_ DIM_CSW_Dimmer_Cancel_Switch : 47|1@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ Reverse_Flag_maybe : 7|1@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 606 HS_IC: 8 HS_IC
+   SG_ VehicleSpeed : 7|10@0+ (1,0) [0|1] "" HS_HUD_MZ
+   SG_ SpeedUnit : 13|1@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ StopVehicle : 28|1@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ DAA_Related : 63|4@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 607 HS_IC_PSM_MZ: 8 HS_IC
+
+BO_ 1034 HS_IC_CentralConfig: 8 HS_IC
+
+BO_ 1078 HS_IC_EATC: 8 HS_IC
+
+BO_ 1093 HS_IC_PSM_MZ: 8 HS_IC
+
+BO_ 1143 HS_IC: 8 HS_IC
+
+BO_ 1147 HS_IC: 8 HS_IC
+   SG_ BSM_Warning : 2|1@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ BSM_Right : 1|1@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ BSM_Left : 15|1@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 1166 HS_IC_PSM_MZ: 8 HS_IC
+
+BO_ 1170 HS_IC: 8 HS_IC
+
+BO_ 1173 HS_IC: 8 HS_IC
+
+BO_ 1180 HS_IC: 8 HS_IC
+
+BO_ 1267 HS_IC: 8 HS_IC
+
+BO_ 1271 HS_IC: 8 HS_IC
+
+BO_ 1425 HS_IC: 8 HS_IC
+
+BO_ 1776 HS_IC_NSWdiag: 8 HS_IC
+
+BO_ 1778 HS_IC_NSWdiag: 8 HS_IC
+
+BO_ 120 HS_ABS: 8 HS_ABS
+   SG_ BrakePressure : 39|16@0+ (0.001,-40) [0|1] "bar" Vector__XXX
+   SG_ Longi_Acc_Corr : 7|16@0+ (0.000512295,-29.2787) [0|1] "G" Vector__XXX
+
+BO_ 121 HS_ABS: 8 HS_ABS
+   SG_ Lateral_Acc_Corr_maybe : 7|16@0+ (0.000512295,-29.2787) [0|1] "" Vector__XXX
+   SG_ YawRate_Corr : 31|16@0+ (0.223437,-114.4) [0|1] "deg/s" Vector__XXX
+
+BO_ 529 HS_ABS: 8 HS_ABS
+
+BO_ 533 HS_ABS: 8 HS_ABS
+   SG_ WheelSpeed_1 : 7|16@0+ (0.01,-100) [0|1] "km/h" Vector__XXX
+   SG_ WheelSpeed_2 : 23|16@0+ (0.01,-100) [0|1] "km/h" Vector__XXX
+   SG_ WheelSpeed_3 : 39|16@0+ (0.01,-100) [0|1] "km/h" Vector__XXX
+   SG_ WheelSpeed_4 : 55|16@0+ (0.01,-100) [0|1] "km/h" Vector__XXX
+
+BO_ 535 HS_ABS: 8 HS_ABS
+
+BO_ 542 HS_ABS: 8 HS_ABS
+
+BO_ 736 HS_ABS: 8 HS_ABS
+
+BO_ 1045 HS_ABS: 8 HS_ABS
+
+BO_ 1430 HS_ABS: 8 HS_ABS
+
+BO_ 154 HS_BCMM: 8 HS_BCMM
+   SG_ F_FOG_RELAY : 3|1@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ Headlight : 7|4@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ Turn : 19|2@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ PanelLight : 50|1@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 155 HS_BCMM: 8 HS_BCMM
+
+BO_ 1085 HS_BCMM: 8 HS_BCMM
+
+BO_ 1086 HS_BCMM: 8 HS_BCMM
+   SG_ ROOM_FUSE : 51|1@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ R_FOG_LAMP : 6|1@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 1087 HS_BCMM: 8 HS_BCMM
+   SG_ Fuel_Related : 7|10@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 1114 HS_BCMM: 8 HS_BCMM
+
+BO_ 1115 HS_BCMM: 8 HS_BCMM
+
+BO_ 1116 HS_BCMM: 8 HS_BCMM
+
+BO_ 1163 HS_BCMM: 8 HS_BCMM
+
+BO_ 1409 HS_BCMM: 8 HS_BCMM
+
+BO_ 540 HS_FSC2_MRCC: 8 HS_FSC2
+
+BO_ 541 HS_FSC2: 8 HS_FSC2
+
+BO_ 578 HS_FSC2: 8 HS_FSC2
+
+BO_ 579 HS_FSC2: 8 HS_FSC2
+
+BO_ 580 HS_FSC2: 8 HS_FSC2
+
+BO_ 581 HS_FSC2: 8 HS_FSC2
+
+BO_ 582 HS_FSC2: 8 HS_FSC2
+
+BO_ 605 HS_FSC2: 8 HS_FSC2
+
+BO_ 863 HS_FSC2: 8 HS_FSC2
+
+BO_ 1088 HS_FSC2: 8 HS_FSC2
+
+BO_ 1157 HS_FSC2: 8 HS_FSC2
+
+BO_ 1160 HS_FSC2: 8 HS_FSC2
+
+BO_ 1061 HS_LVL: 8 HS_LVL
+
+BO_ 64 HS_PCM: 8 HS_PCM
+
+BO_ 253 HS_PCM: 8 HS_PCM
+
+BO_ 254 HS_PCM: 8 HS_PCM
+
+BO_ 357 HS_PCM: 8 HS_PCM
+   SG_ Clutch_Related : 22|7@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ MT_Gear_Select : 36|2@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ CC_SetSpeed : 14|8@0+ (1,0) [0|1] "km/h" Vector__XXX
+   SG_ CC_Mode_Related : 7|9@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ CC_Mode_Related2 : 31|8@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 358 HS_PCM: 8 HS_PCM
+
+BO_ 304 HS_PCM: 8 HS_PCM
+
+BO_ 359 HS_PCM: 8 HS_PCM
+   SG_ Throttle_Related : 7|12@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 512 HS_PCM: 8 HS_PCM
+
+BO_ 514 HS_PCM: 8 HS_PCM
+   SG_ EngineRPM : 7|16@0+ (0.25,0) [0|1] "rpm" Vector__XXX
+   SG_ VehicleSpeed : 23|16@0+ (0.01,0) [0|1] "km/h" Vector__XXX
+   SG_ AccPedalPos : 39|16@0+ (0.0015625,0) [0|1] "" Vector__XXX
+
+BO_ 543 HS_PCM: 8 HS_PCM
+
+BO_ 1056 HS_PCM: 8 HS_PCM
+   SG_ CoolantTemp : 7|8@0+ (1,-40) [0|1] "degC" Vector__XXX
+   SG_ AmbientTemp : 63|8@0+ (0.25,0) [0|1] "degC" Vector__XXX
+
+BO_ 1067 HS_PCM: 8 HS_PCM
+
+BO_ 1233 HS_PCM: 8 HS_PCM
+
+BO_ 1236 HS_PCM: 8 HS_PCM
+
+BO_ 1237 HS_PCM: 8 HS_PCM
+
+BO_ 1238 HS_PCM: 8 HS_PCM
+
+BO_ 1239 HS_PCM: 8 HS_PCM
+
+BO_ 1241 HS_PCM: 8 HS_PCM
+
+BO_ 1242 HS_PCM: 8 HS_PCM
+
+BO_ 1244 HS_PCM: 8 HS_PCM
+
+BO_ 1264 HS_PCM: 8 HS_PCM
+
+BO_ 1274 HS_PCM: 8 HS_PCM
+
+BO_ 1278 HS_PCM: 8 HS_PCM
+
+BO_ 117 HS_RCM: 8 HS_RCM
+   SG_ Lateral_Acc_Raw : 23|16@0+ (0.001,-2) [0|1] "G" Vector__XXX
+   SG_ YawRate_Raw : 39|16@0+ (0.01,-180) [0|1] "deg/s" Vector__XXX
+
+BO_ 118 HS_RCM: 8 HS_RCM
+   SG_ Longitudinal_Acc_Raw : 23|16@0+ (0.001,-2) [0|1] "G" Vector__XXX
+
+BO_ 832 HS_RCM: 8 HS_RCM
+
+BO_ 834 HS_RCM: 8 HS_RCM
+
+BO_ 1108 HS_RCM: 8 HS_RCM
+
+BO_ 134 HS_EPAS: 8 HS_EPAS
+   SG_ SteeringAngle_related : 7|16@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 284 HS_EPAS: 8 HS_EPAS
+
+BO_ 576 HS_EPAS: 8 HS_EPAS
+   SG_ SteeringTorque_related : 7|16@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 138 HS_DCDC_Maybe: 8 HS_DCDC_Maybe
+
+BO_ 1243 HS_DCDC_Maybe: 8 HS_DCDC_Maybe
+
+BO_ 1247 HS_DCDC_Maybe: 8 HS_DCDC_Maybe
+
+BO_ 805 HS_EVP: 8 HS_EVP
+
+BO_ 976 HS_CMU_Maybe: 8 HS_CMU_Maybe
+
+BO_ 977 HS_CMU_MMmonth_Maybe: 8 HS_CMU_Maybe
+   SG_ Date : 49|7@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ Mileage : 39|22@0+ (1,0) [0|1] "km" Vector__XXX
+
+BO_ 978 HS_CMU_Maybe: 8 HS_CMU_Maybe
+
+BO_ 1171 HS_CMU_Maybe: 8 HS_CMU_Maybe
+
+BO_ 1266 HS_CMU_Maybe: 8 HS_CMU_Maybe
+   SG_ HUD_Height : 27|12@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ HUD_Height_Moving : 28|1@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ HUD_Bright : 35|4@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 1272 HS_CMU_Maybe: 8 HS_CMU_Maybe
+
+BO_ 1479 HS_CMU_Maybe: 8 HS_CMU_Maybe
+
+BO_ 539 HS_MRCC: 8 HS_MRCC
+
+BO_ 865 HS_MRCC: 8 HS_MRCC
+
+BO_ 866 HS_MRCC: 8 HS_MRCC
+
+BO_ 867 HS_MRCC: 8 HS_MRCC
+
+BO_ 868 HS_MRCC: 8 HS_MRCC
+
+BO_ 869 HS_MRCC: 8 HS_MRCC
+   SG_ 0 : 7|8@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ 1 : 15|8@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ 2 : 23|8@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ 3 : 31|8@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ 4 : 39|8@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ 5 : 47|8@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ 6 : 55|8@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ 7 : 63|8@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 870 HS_MRCC: 8 HS_MRCC
+
+BO_ 1177 HS_MRCC: 8 HS_MRCC
+
+BO_ 1183 HS_HUD_MZ: 8 HS_HUD_MZ
+
+BO_ 1269 HS_HUD_MZ: 8 HS_HUD_MZ
+
+BO_ 1435 HS_HUD_MZ: 8 HS_HUD_MZ
+
+BO_ 1138 HS_RHT_Maybe: 8 HS_RHT
+   SG_ RoofGraphicStatus : 23|4@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2016 OBD2_PCM: 8 OBD2
+
+BO_ 2024 OBD2_PCM: 8 OBD2
+
+BO_ 1988 OBD2_BSM: 8 OBD2
+
+BO_ 1996 OBD2_BSM: 8 OBD2
+
+BO_ 1975 OBD2_RBCM_ESU: 8 OBD2
+
+BO_ 1983 OBD2_RBCM_ESU: 8 OBD2
+
+BO_ 1970 OBD2_HUD_MZ: 8 OBD2
+
+BO_ 1978 OBD2_HUD_MZ: 8 OBD2
+
+BO_ 1907 OBD2_EVP: 8 OBD2
+
+BO_ 1915 OBD2_EVP: 8 OBD2
+
+BO_ 1892 OBD2_MRCC: 8 OBD2
+
+BO_ 1900 OBD2_MRCC: 8 OBD2
+
+BO_ 1888 OBD2_ABS: 8 OBD2
+
+BO_ 1896 OBD2_ABS: 8 OBD2
+
+BO_ 1847 OBD2_RCM: 8 OBD2
+
+BO_ 1841 OBD2_SSU: 8 OBD2
+
+BO_ 1849 OBD2_SSU: 8 OBD2
+
+BO_ 1846 OBD2_PSM_MZ: 8 OBD2
+
+BO_ 1854 OBD2_PSM_MZ: 8 OBD2
+
+BO_ 1844 OBD2_AFS_ALM: 8 OBD2
+
+BO_ 1852 OBD2_AFS_ALM: 8 OBD2
+
+BO_ 1843 OBD2_EATC: 8 OBD2
+
+BO_ 1851 OBD2_EATC: 8 OBD2
+
+BO_ 1840 OBD2_EPAS: 8 OBD2
+
+BO_ 1848 OBD2_EPAS: 8 OBD2
+
+BO_ 1830 OBD2_FBCM_BCMM: 8 OBD2
+
+BO_ 1838 OBD2_FBCM_BCMM: 8 OBD2
+
+BO_ 1824 OBD2_IC: 8 OBD2
+
+BO_ 1832 OBD2_IC: 8 OBD2
+
+BO_ 1798 OBD2_FSC: 8 OBD2
+
+BO_ 1806 OBD2_FSC: 8 OBD2
+
+BO_ 2017 OBD2_TCM: 8 OBD2
+
+BO_ 2025 OBD2_TCM: 8 OBD2
+
+BO_ 1993 OBD2_360VMC: 8 OBD2
+
+BO_ 2448 LICENSE: 8 LICENSE
+   SG_ License : 0|1@0+ (1,0) [0|1] "License: CC-BY 4.0" Vector__XXX
+   SG_ Repository : 1|1@0+ (1,0) [0|1] "https://github.com/berumiya/CAN_DBC_6thGenMazda" Vector__XXX
+   SG_ DecodedBy : 2|1@0+ (1,0) [0|1] "Decoded and maintained by berumiya 990S labo" Vector__XXX
+   SG_ Source : 3|1@0+ (1,0) [0|1] "reverse-engineered CAN traffic." Vector__XXX
+
+CM_ SG_ 120 Longi_Acc_Corr "[G] = [N-0xDF40]/0x7A0";
+CM_ SG_ 121 Lateral_Acc_Corr_maybe "[G] = [N-0xDF40]/0x7A0";
+CM_ SG_ 121 YawRate_Corr "[deg/s] = [N-0x200]/0x200*114.4";
+CM_ SG_ 514 AccPedalPos "Scale /640";
+CM_ SG_ 117 Lateral_Acc_Raw "[G]=N*0.001-2";
+CM_ SG_ 117 YawRate_Raw "[deg/s]=N*0.01-180";
+CM_ SG_ 118 Longitudinal_Acc_Raw "[G]=N*0.001-2";
+CM_ SG_ 1266 HUD_Height "Min[+] 0x00C5, Max[-] 0x0DC5";
+VAL_ 145 HAZ_SW 0 "Off" 1 "On";
+VAL_ 145 WIP_F_INT 0 "0" 30 "1" 50 "2" 70 "3" 90 "4";
+VAL_ 145 TURN_SW 2 "L" 0 "Off" 1 "R";
+VAL_ 145 FOG_SW 0 "Off" 1 "Rear" 2 "Front" 3 "Front_Rear";
+VAL_ 145 RearWiper 3 "INT" 1 "ON" 0 "Off";
+VAL_ 145 Washer 0 "Off" 1 "Rear" 2 "Front" 3 "Front+Rear";
+VAL_ 145 FrontWiper 0 "Off" 1 "ON" 2 "HI" 3 "INT";
+VAL_ 145 LIGHT 769 "Off" 768 "AUTO" 896 "TNS" 960 "HEAD";
+VAL_ 80 KeyState 0 "OFF" 1 "ACC" 2 "ON" 3 "START";
+VAL_ 80 KeyStateInv 5 "ACC" 7 "OFF" 3 "ON" 0 "START";
+VAL_ 157 CRU_CON_SW1 0 "Not_Pressed" 4 "OFF_CANC" 128 "Set_(Dn)" 64 "Set_(Up)" 1 "ON_MODE" 16 "Resume" 256 "Distance_(Up)" 512 "Distance_(Dn)";
+VAL_ 628 INFO_SW 0 "Off" 1 "SW1(Up)" 2 "SW2(Dn)" 3 "SW3(INFO)";
+VAL_ 628 Key_hold 1 "Hold_key_close_to_start_button" 0 "-";
+VAL_ 628 Key_notfound 1 "Key_not_found" 0 "-";
+VAL_ 628 IC_Buzz 0 "No Description" 1 "P-P-" 2 "P-P-x3" 3 "PPx6";
+VAL_ 628 Key_Batt 1 "Key_Battery_is_low" 0 "-";
+VAL_ 606 SpeedUnit 0 "km/h" 1 "mph";
+VAL_ 606 StopVehicle 0 "" 1 "Stop_Vehicle_at_safe_area";
+VAL_ 606 DAA_Related 6 "RecommendRest";
+VAL_ 154 F_FOG_RELAY 1 "On" 0 "Off";
+VAL_ 154 Headlight 0 "Off" 2 "TNS" 3 "TNS_Lo" 12 "Hi" 0 "No Description";
+VAL_ 154 Turn 0 "Off" 2 "R" 1 "L" 3 "LR";
+VAL_ 154 PanelLight 0 "Day" 1 "Night";
+VAL_ 1086 R_FOG_LAMP 1 "On" 0 "Off";
+VAL_ 357 MT_Gear_Select 1 "InGear" 2 "Newtral";
+VAL_ 357 CC_Mode_Related 0 "OFF" 1 "ON";
+VAL_ 357 CC_Mode_Related2 0 "OFF" 1 "ON";

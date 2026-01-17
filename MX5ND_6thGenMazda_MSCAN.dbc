@@ -1,0 +1,124 @@
+VERSION "berumiya 990S labo"
+CM_ "License: CC-BY 4.0";
+CM_ "Repository : https://github.com/berumiya/CAN_DBC_6thGenMazda";
+CM_ "Decoded and maintained by berumiya 990S labo";
+CM_ "Source : reverse-engineered CAN traffic.";
+
+NS_ :
+    NS_DESC_
+    CM_
+    BA_DEF_
+    BA_
+    VAL_
+    CAT_DEF_
+    CAT_
+    FILTER
+    BA_DEF_DEF_
+    EV_DATA_
+    ENVVAR_DATA_
+    SGTYPE_
+    SGTYPE_VAL_
+    BA_DEF_SGTYPE_
+    BA_SGTYPE_
+    SIG_TYPE_REF_
+    VAL_TABLE_
+    SIG_GROUP_
+    SIG_VALTYPE_
+    SIGTYPE_VALTYPE_
+    BO_TX_BU_
+    BA_DEF_REL_
+    BA_REL_
+    BA_DEF_DEF_REL_
+    BU_SG_REL_
+    BU_EV_REL_
+    BU_BO_REL_
+    SG_MUL_VAL_
+
+BS_: 
+BU_: MS_PSM_MZ MS_EATC MS_IC LICENSE 
+BO_ 1078 MS_EATC: 8 MS_EATC
+   SG_ R_DEFOG_Request : 6|1@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ AC_Comp_Request : 2|1@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ Blower_fan_status : 1|2@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ iStop : 4|1@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 1283 MS_EATC: 8 MS_EATC
+
+BO_ 606 MS_PSM_MZ: 8 MS_PSM_MZ
+
+BO_ 607 MS_PSM_MZ: 8 MS_PSM_MZ
+
+BO_ 1093 MS_PSM_MZ: 8 MS_PSM_MZ
+
+BO_ 1166 MS_PSM_MZ: 8 MS_PSM_MZ
+
+BO_ 80 MS_IC_SSU: 8 MS_IC
+
+BO_ 120 MS_IC_ABS: 8 MS_IC
+
+BO_ 121 MS_IC_ABS: 8 MS_IC
+
+BO_ 134 MS_IC_EPAS_Maybe: 8 MS_IC
+
+BO_ 145 MS_IC_SSU: 8 MS_IC
+
+BO_ 154 MS_IC_BCMM: 8 MS_IC
+
+BO_ 155 MS_IC_BCMM: 8 MS_IC
+   SG_ R_DEFOG_Status : 5|2@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ Blower_Relay_Status : 1|1@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 158 MS_IC: 8 MS_IC
+
+BO_ 159 MS_IC: 8 MS_IC
+
+BO_ 253 MS_IC_PCM: 8 MS_IC
+
+BO_ 357 MS_IC_PCM: 8 MS_IC
+
+BO_ 358 MS_IC_PCM: 8 MS_IC
+
+BO_ 514 MS_IC_PCM: 8 MS_IC
+
+BO_ 533 MS_IC_ABS: 8 MS_IC
+
+BO_ 535 MS_IC_ABS: 8 MS_IC
+
+BO_ 540 MS_IC_FSC2: 8 MS_IC
+
+BO_ 552 MS_IC: 8 MS_IC
+
+BO_ 576 MS_IC_EPAS_Maybe: 8 MS_IC
+
+BO_ 581 MS_IC_FSC2: 8 MS_IC
+
+BO_ 605 MS_IC_FSC2: 8 MS_IC
+
+BO_ 832 MS_IC_RCM_Maybe: 8 MS_IC
+
+BO_ 1034 MS_IC: 8 MS_IC
+
+BO_ 1056 MS_IC_PCM: 8 MS_IC
+
+BO_ 1085 MS_IC_BCMM: 8 MS_IC
+
+BO_ 1264 MS_IC_PCM: 8 MS_IC
+
+BO_ 1269 MS_IC: 8 MS_IC
+
+BO_ 1272 MS_IC_CMU_Maybe: 8 MS_IC
+
+BO_ 1297 MS_IC: 8 MS_IC
+
+BO_ 2448 LICENSE: 8 LICENSE
+   SG_ License : 0|1@0+ (1,0) [0|1] "License: CC-BY 4.0" Vector__XXX
+   SG_ Repository : 1|1@0+ (1,0) [0|1] "https://github.com/berumiya/CAN_DBC_6thGenMazda" Vector__XXX
+   SG_ DecodedBy : 2|1@0+ (1,0) [0|1] "Decoded and maintained by berumiya 990S labo" Vector__XXX
+   SG_ Source : 3|1@0+ (1,0) [0|1] "reverse-engineered CAN traffic." Vector__XXX
+
+VAL_ 1078 R_DEFOG_Request 1 "Request_On" 0 "Request_Off";
+VAL_ 1078 AC_Comp_Request 1 "On_(EVAP>5C)" 0 "Off_(EVAP<3C)";
+VAL_ 1078 Blower_fan_status 0 "Speed_0-3" 3 "Speed_4-7";
+VAL_ 1078 iStop 1 "Allow" 0 "Prohibit_(MaxAC_or_MaxHot_or_F-Defrost)";
+VAL_ 155 R_DEFOG_Status 0 "Off_(Available)" 1 "Off_(Suspended)" 2 "Off_(Inhibit)" 3 "On";
+VAL_ 155 Blower_Relay_Status 0 "Abnormal" 1 "Normal";
