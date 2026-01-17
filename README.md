@@ -1,21 +1,29 @@
 # CAN DBC for MAZDA MX-5 2015-2023 (ND1/ND2)
 
-## About this repository
+日本語はこちらから [README.ja.md](README.ja.md) for Japanese users.
 
-This repository provides CAN DBC files created through independent reverse engineering and analysis of CAN bus communications for MAZDA MX-5 2015-2023 (ND1/ND2).
+## About This Repository
 
-The contents are based on personal research, including real vehicle traffic observation, log analysis, and comparison with known behaviors.  
-Some signals and definitions are inferred and not officially documented.
+This repository provides [CAN DBC](https://www.csselectronics.com/pages/can-dbc-file-database-intro) files created through independent analysis of CAN bus communications for MAZDA MX-5 2015-2023 (ND1/ND2).
 
+The DBC files are based on observations of real vehicle communication, log analysis, and cross-referencing with known specifications.  
+All contents represent independent investigation and estimation performed by an individual, and are not based on official manufacturer documentation.
+
+Rather than aiming for a “finished” or definitive database, this project is intended to be grown collaboratively by sharing knowledge.  
+Intermediate and exploratory analysis results are intentionally included, with the expectation that the contents will continue to evolve over time.
 
 
 ## Contents
 
 - CAN DBC files for HS-CAN and MS-CAN  
-  - Message and signal definitions (ID, signal name, scale, offset, etc.)  
-  - Comments describing signal meaning, behavior, or assumptions  
+  - Signal definitions (ID, signal name, scale, offset, etc.)  
+  - Comments describing signal meaning, behavior, and underlying assumptions  
 
-The contents may be updated as further analysis progresses.
+The contents are primarily based on personal analysis.  
+As a result, many messages are currently defined only at a structural level, and some signals are still under verification.
+
+Further refinement and expansion are expected as analysis progresses.  
+Issues for corrections or additional information, as well as pull requests supported by validation or evidence, are very welcome.
 
 
 
@@ -33,7 +41,7 @@ Other vehicle models and model years:
   - **BCMM** style vehicles show particularly strong similarities and should be mutually useful as references.
     - DEMIO/MAZDA2 (DJ/DL), CX-3 (DK)
   - **FBCM / RBCM** style vehicles have some differences in configuration, but are broadly similar in overall structure.
-    - CX-5(KE), CX-5(KF), CX-9(TC), MAZDA3(BM/BN), MAZDA6(GJ/GL)
+    - CX-5(KE), CX-5(KF), CX-9(TC), MAZDA3(BM/BN), MAZDA6(GJ/GL) etc.
 - **ND3 (2024 and later)** vehicles appear to be significantly different and follow a substantially different architecture.
 
 ### Note on Generation Naming Differences
@@ -43,7 +51,6 @@ in Japan and in overseas markets.
 
 In this repository, each README adopts the naming convention commonly used  
 in the language and region it targets.  
-The table below summarizes the differences.  
 As a result, the Japanese and English README files may use different generation names for the same model years.  
 The actual vehicle coverage is consistent between both documents.
 
