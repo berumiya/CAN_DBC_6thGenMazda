@@ -35,7 +35,7 @@ NS_ :
     SG_MUL_VAL_
 
 BS_: 
-BU_: HS_SSU HS_CMU_Maybe HS_BCMM HS_LVL HS_ABS HS_IC HS_RCM HS_EPAS HS_FSC2 HS_PCM HS_EVP HS_DCDC_Maybe HS_MRCC HS_HUD_MZ HS_RHT HS_TCUAT OBD2 LICENSE
+BU_: HS_SSU HS_CMU_Maybe HS_BCMM HS_LVL HS_ABS HS_IC HS_RCM HS_EPAS HS_FSC2 HS_PCM HS_EVP HS_DCDC_Maybe HS_MRCC HS_HUD_MZ HS_RHT HS_TCUAT OBD2 LICENSE 
 BO_ 145 HS_SSU: 8 HS_SSU
    SG_ HAZ_SW : 10|1@0+ (1,0) [0|1] "" Vector__XXX
    SG_ WIP_F_INT : 55|8@0+ (1,0) [0|1] "" Vector__XXX
@@ -228,7 +228,7 @@ BO_ 543 HS_PCM: 8 HS_PCM
 
 BO_ 1056 HS_PCM: 8 HS_PCM
    SG_ CoolantTemp : 7|8@0+ (1,-40) [0|1] "degC" Vector__XXX
-   SG_ AmbientTemp : 63|8@0+ (0.25,0) [0|1] "degC" Vector__XXX
+   SG_ AmbientTemp : 55|16@0+ (0.25,-3200) [0|1] "degC" Vector__XXX
 
 BO_ 1067 HS_PCM: 8 HS_PCM
 
@@ -434,6 +434,7 @@ VAL_ 628 Key_hold 1 "Hold_key_close_to_start_button" 0 "-";
 VAL_ 628 Key_notfound 1 "Key_not_found" 0 "-";
 VAL_ 628 IC_Buzz 0 "No Description" 1 "P-P-" 2 "P-P-x3" 3 "PPx6";
 VAL_ 628 Key_Batt 1 "Key_Battery_is_low" 0 "-";
+VAL_ 159 Parking_Brake 0 "Released" 1 "Applied";
 VAL_ 606 SpeedUnit 0 "km/h" 1 "mph";
 VAL_ 606 StopVehicle 0 "" 1 "Stop_Vehicle_at_safe_area";
 VAL_ 606 DAA_Related 6 "RecommendRest";
@@ -445,4 +446,3 @@ VAL_ 1086 R_FOG_LAMP 1 "On" 0 "Off";
 VAL_ 357 MT_Gear_Select 1 "InGear" 2 "Newtral";
 VAL_ 357 CC_Mode_Related 0 "OFF" 1 "ON";
 VAL_ 357 CC_Mode_Related2 0 "OFF" 1 "ON";
-VAL_ 159 Parking_Brake 0 "Released" 1 "Pulled";
