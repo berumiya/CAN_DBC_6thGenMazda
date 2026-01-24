@@ -158,6 +158,9 @@ BO_ 1085 HS_BCMM: 8 HS_BCMM
 BO_ 1086 HS_BCMM: 8 HS_BCMM
    SG_ ROOM_FUSE : 51|1@0+ (1,0) [0|1] "" Vector__XXX
    SG_ R_FOG_LAMP : 6|1@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ Trunk : 47|1@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ DoorRight : 37|1@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ DoorLeft : 36|1@0+ (1,0) [0|1] "" Vector__XXX
 
 BO_ 1087 HS_BCMM: 8 HS_BCMM
    SG_ Fuel_Related : 7|10@0+ (1,0) [0|1] "" Vector__XXX
@@ -445,6 +448,9 @@ VAL_ 154 Headlight 0 "Off" 2 "TNS" 3 "TNS_Lo" 12 "Hi" 0 "No Description";
 VAL_ 154 Turn 0 "Off" 2 "R" 1 "L" 3 "LR";
 VAL_ 154 PanelLight 0 "Day" 1 "Night";
 VAL_ 1086 R_FOG_LAMP 1 "On" 0 "Off";
+VAL_ 1086 Trunk 0 "Closed" 1 "Open";
+VAL_ 1086 DoorRight 0 "Closed" 1 "Ajar";
+VAL_ 1086 DoorLeft 0 "Closed" 1 "Ajar";
 VAL_ 357 MT_Gear_Select 1 "InGear" 2 "Newtral";
 VAL_ 357 CC_Mode_Related 0 "OFF" 1 "ON";
 VAL_ 357 CC_Mode_Related2 0 "OFF" 1 "ON";
