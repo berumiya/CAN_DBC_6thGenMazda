@@ -64,6 +64,7 @@ BO_ 628 HS_SSU: 8 HS_SSU
    SG_ Key_notfound : 36|1@0+ (1,0) [0|1] "" Vector__XXX
    SG_ IC_Buzz : 7|8@0+ (1,0) [0|1] "" Vector__XXX
    SG_ Key_Batt : 39|1@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ Key_fob : 47|4@0+ (1,0) [0|1] "" Vector__XXX
 
 BO_ 1154 HS_SSU: 8 HS_SSU
 
@@ -434,6 +435,7 @@ VAL_ 628 Key_hold 1 "Hold_key_close_to_start_button" 0 "-";
 VAL_ 628 Key_notfound 1 "Key_not_found" 0 "-";
 VAL_ 628 IC_Buzz 0 "No Description" 1 "P-P-" 2 "P-P-x3" 3 "PPx6";
 VAL_ 628 Key_Batt 1 "Key_Battery_is_low" 0 "-";
+VAL_ 628 Key_fob 5 "Lock" 6 "Unlock";
 VAL_ 159 Parking_Brake 0 "Released" 1 "Applied";
 VAL_ 606 SpeedUnit 0 "km/h" 1 "mph";
 VAL_ 606 StopVehicle 0 "" 1 "Stop_Vehicle_at_safe_area";
