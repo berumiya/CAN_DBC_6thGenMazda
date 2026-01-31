@@ -54,6 +54,7 @@ BO_ 80 HS_SSU: 8 HS_SSU
    SG_ StarterInterLockSW : 25|1@0+ (1,0) [0|1] "" Vector__XXX
 
 BO_ 130 HS_SSU: 8 HS_SSU
+   SG_ Steering_Wheel_Absolute_Angle : 23|16@0+ (0.05,-1600) [0|1] "deg" Vector__XXX
 
 BO_ 157 HS_SSU: 8 HS_SSU
    SG_ CRU_CON_SW1 : 7|10@0+ (1,0) [0|1] "" Vector__XXX
@@ -414,6 +415,7 @@ BO_ 2448 LICENSE: 8 LICENSE
    SG_ DecodedBy : 2|1@0+ (1,0) [0|1] "Decoded and maintained by berumiya 990S labo" Vector__XXX
    SG_ Source : 3|1@0+ (1,0) [0|1] "reverse-engineered CAN traffic." Vector__XXX
 
+CM_ SG_ 130 Steering_Wheel_Absolute_Angle "FORScan_STR_AB_ANG";
 CM_ SG_ 120 Longi_Acc_Corr "[G] = [N-0xDF40]/0x7A0";
 CM_ SG_ 121 Lateral_Acc_Corr_maybe "[G] = [N-0xDF40]/0x7A0";
 CM_ SG_ 121 YawRate_Corr "[deg/s] = [N-0x200]/0x200*114.4";
