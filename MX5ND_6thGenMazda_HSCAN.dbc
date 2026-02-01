@@ -214,6 +214,7 @@ BO_ 357 HS_PCM: 8 HS_PCM
    SG_ CC_SetSpeed : 14|8@0+ (1,0) [0|1] "km/h" Vector__XXX
    SG_ CC_Mode_Related : 7|9@0+ (1,0) [0|1] "" Vector__XXX
    SG_ CC_Mode_Related2 : 31|8@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ MT_Gear_Position : 55|8@0+ (1,0) [0|255] "" Vector__XXX
 
 BO_ 358 HS_PCM: 8 HS_PCM
 
@@ -456,3 +457,4 @@ VAL_ 1086 DoorLeft 0 "Closed" 1 "Ajar";
 VAL_ 357 MT_Gear_Select 1 "InGear" 2 "Newtral";
 VAL_ 357 CC_Mode_Related 0 "OFF" 1 "ON";
 VAL_ 357 CC_Mode_Related2 0 "OFF" 1 "ON";
+VAL_ 357 MT_Gear_Position 19 "N/1st" 11 "2nd" 7 "3rd" 6 "4th" 5 "5th" 3 "6th";
