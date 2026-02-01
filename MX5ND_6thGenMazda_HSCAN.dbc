@@ -231,6 +231,8 @@ BO_ 514 HS_PCM: 8 HS_PCM
    SG_ VehicleSpeed : 23|16@0+ (0.01,0) [0|1] "km/h" Vector__XXX
    SG_ APP_Accelerator_Pedal_Position : 39|16@0+ (0.0015625,0) [0|1] "%" Vector__XXX
 
+BO_ 522 HS_PCM_w_i-ELOOP: 8 HS_PCM
+
 BO_ 543 HS_PCM: 8 HS_PCM
 
 BO_ 1056 HS_PCM: 8 HS_PCM
@@ -290,6 +292,7 @@ BO_ 1243 HS_DCDC_Maybe: 8 HS_DCDC_Maybe
 BO_ 1247 HS_DCDC_Maybe: 8 HS_DCDC_Maybe
 
 BO_ 805 HS_EVP: 8 HS_EVP
+   SG_ VS1_Vaccum_Sensor_1 : 7|12@0+ (0.1,0) [0|1] "kPa" Vector__XXX
 
 BO_ 976 HS_CMU_Maybe: 8 HS_CMU_Maybe
 
