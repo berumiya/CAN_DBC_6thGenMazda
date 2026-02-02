@@ -205,6 +205,8 @@ BO_ 1061 HS_LVL: 8 HS_LVL
 BO_ 64 HS_PCM: 8 HS_PCM
 
 BO_ 253 HS_PCM: 8 HS_PCM
+   SG_ MT_Gear_Recommend : 13|3@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ MT_Gear_Actual : 19|3@0+ (1,0) [0|1] "" Vector__XXX
 
 BO_ 254 HS_PCM: 8 HS_PCM
 
