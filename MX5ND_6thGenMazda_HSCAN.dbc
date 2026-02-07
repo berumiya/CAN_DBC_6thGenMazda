@@ -205,6 +205,8 @@ BO_ 1061 HS_LVL: 8 HS_LVL
 BO_ 64 HS_PCM: 8 HS_PCM
 
 BO_ 253 HS_PCM: 8 HS_PCM
+   SG_ MT_Gear_Recommend : 13|3@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ MT_Gear_Actual : 19|3@0+ (1,0) [0|1] "" Vector__XXX
    SG_ MAP_Manifold_absolute_pressure_sensor : 55|8@0+ (1,2) [10|115] "kPa" Vector__XXX
 
 BO_ 254 HS_PCM: 8 HS_PCM
@@ -215,6 +217,7 @@ BO_ 357 HS_PCM: 8 HS_PCM
    SG_ CC_SetSpeed : 14|8@0+ (1,0) [0|1] "km/h" Vector__XXX
    SG_ CC_Mode_Related : 7|9@0+ (1,0) [0|1] "" Vector__XXX
    SG_ CC_Mode_Related2 : 31|8@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ MT_Gear_Position : 55|8@0+ (1,0) [0|255] "" Vector__XXX
 
 BO_ 358 HS_PCM: 8 HS_PCM
    SG_ BBP_Brake_Booster_Pressure_2 : 11|12@0+ (0.1,0) [0|1] "kPa" Vector__XXX
@@ -462,3 +465,4 @@ VAL_ 253 MAP_Manifold_absolute_pressure_sensor 257 "Invalid" 10 "10_or_below" 11
 VAL_ 357 MT_Gear_Select 1 "InGear" 2 "Newtral";
 VAL_ 357 CC_Mode_Related 0 "OFF" 1 "ON";
 VAL_ 357 CC_Mode_Related2 0 "OFF" 1 "ON";
+VAL_ 357 MT_Gear_Position 19 "N/1st" 11 "2nd" 7 "3rd" 6 "4th" 5 "5th" 3 "6th";
