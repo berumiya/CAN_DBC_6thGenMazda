@@ -207,6 +207,7 @@ BO_ 64 HS_PCM: 8 HS_PCM
 BO_ 253 HS_PCM: 8 HS_PCM
    SG_ MT_Gear_Recommend : 13|3@0+ (1,0) [0|1] "" Vector__XXX
    SG_ MT_Gear_Actual : 19|3@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ MAP_Manifold_absolute_pressure_sensor : 55|8@0+ (1,2) [10|115] "kPa" Vector__XXX
 
 BO_ 254 HS_PCM: 8 HS_PCM
 
@@ -219,18 +220,21 @@ BO_ 357 HS_PCM: 8 HS_PCM
    SG_ MT_Gear_Position : 55|8@0+ (1,0) [0|255] "" Vector__XXX
 
 BO_ 358 HS_PCM: 8 HS_PCM
+   SG_ BBP_Brake_Booster_Pressure_2 : 11|12@0+ (0.1,0) [0|1] "kPa" Vector__XXX
 
 BO_ 304 HS_PCM: 8 HS_PCM
 
 BO_ 359 HS_PCM: 8 HS_PCM
-   SG_ Throttle_Related : 7|12@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ APP_Accelerator_Pedal_Position : 7|10@0+ (0.1,0) [0|1] "%" Vector__XXX
 
 BO_ 512 HS_PCM: 8 HS_PCM
 
 BO_ 514 HS_PCM: 8 HS_PCM
    SG_ EngineRPM : 7|16@0+ (0.25,0) [0|1] "rpm" Vector__XXX
    SG_ VehicleSpeed : 23|16@0+ (0.01,0) [0|1] "km/h" Vector__XXX
-   SG_ AccPedalPos : 39|16@0+ (0.0015625,0) [0|1] "" Vector__XXX
+   SG_ APP_Accelerator_Pedal_Position : 39|16@0+ (0.0015625,0) [0|1] "%" Vector__XXX
+
+BO_ 522 HS_PCM_w_i-ELOOP: 8 HS_PCM
 
 BO_ 543 HS_PCM: 8 HS_PCM
 
@@ -291,6 +295,7 @@ BO_ 1243 HS_DCDC_Maybe: 8 HS_DCDC_Maybe
 BO_ 1247 HS_DCDC_Maybe: 8 HS_DCDC_Maybe
 
 BO_ 805 HS_EVP: 8 HS_EVP
+   SG_ VS1_Vaccum_Sensor_1 : 7|12@0+ (0.1,0) [0|1] "kPa" Vector__XXX
 
 BO_ 976 HS_CMU_Maybe: 8 HS_CMU_Maybe
 
@@ -456,6 +461,7 @@ VAL_ 1086 R_FOG_LAMP 1 "On" 0 "Off";
 VAL_ 1086 Trunk 0 "Closed" 1 "Open";
 VAL_ 1086 DoorRight 0 "Closed" 1 "Ajar";
 VAL_ 1086 DoorLeft 0 "Closed" 1 "Ajar";
+VAL_ 253 MAP_Manifold_absolute_pressure_sensor 257 "Invalid" 10 "10_or_below" 115 "115_or_higher";
 VAL_ 357 MT_Gear_Select 1 "InGear" 2 "Newtral";
 VAL_ 357 CC_Mode_Related 0 "OFF" 1 "ON";
 VAL_ 357 CC_Mode_Related2 0 "OFF" 1 "ON";
