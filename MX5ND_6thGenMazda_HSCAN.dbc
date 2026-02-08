@@ -90,6 +90,48 @@ BO_ 606 HS_IC: 8 HS_IC
 BO_ 607 HS_IC_PSM_MZ: 8 HS_IC
 
 BO_ 1034 HS_IC_CentralConfig: 8 HS_IC
+   SG_ C000_TOTAL_TIME m49152M : 23|32@0+ (0.1,1) [0|1] "sec" Vector__XXX
+   SG_ C001_ODO m49153M : 23|32@0+ (1,0) [0|1] "km" Vector__XXX
+   SG_ C100_VIN_1_6 m49408M : 23|48@4- (1,0) [0|1] "" Vector__XXX
+   SG_ C101_VIN_7_12 m49409M : 23|48@4- (1,0) [0|1] "" Vector__XXX
+   SG_ C102_VIN_13_17 m49410M : 23|40@4- (1,0) [0|1] "" Vector__XXX
+   SG_ C103 m49411M : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ C104 m49412M : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ BF00_IG_ON_Timer m48896M : 39|16@0+ (1,0) [0|1] "sec" Vector__XXX
+   SG_ BF01 m48897M : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ BF02 m48898M : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ BF03 m48899M : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ BF04 m48900M : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ BF05 m48901M : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ BF06 m48902M : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ BF07 m48903M : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ BF08 m48904M : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ BF09 m48905M : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ BF0A m48906M : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ BF0B m48907M : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ BF0C m48908M : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ BF0D m48909M : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ BF0E m48910M : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ BF0F m48911M : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ BF10 m48912M : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ BF11 m48913M : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ BF12 m48914M : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ BF13 m48915M : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ BF14 m48916M : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ BF15 m48917M : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ BF16 m48918M : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ BF17 m48919M : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ BF18 m48920M : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ BF19 m48921M : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ BF1A m48922M : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ BF1B m48923M : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ BF1C m48924M : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ BF1D m48925M : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ BF1E m48926M : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ BF1F m48927M : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ BF20 m48928M : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ BF21 m48929M : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ Central_Config_Index M : 7|16@0+ (1,0) [0|1] "" Vector__XXX
 
 BO_ 1078 HS_IC_EATC: 8 HS_IC
 
@@ -453,6 +495,7 @@ VAL_ 159 Parking_Brake 0 "Released" 1 "Applied";
 VAL_ 606 SpeedUnit 0 "km/h" 1 "mph";
 VAL_ 606 StopVehicle 0 "" 1 "Stop_Vehicle_at_safe_area";
 VAL_ 606 DAA_Related 6 "RecommendRest";
+VAL_ 1034 Central_Config_Index 49152 "C000" 49153 "C001" 49408 "C100" 49409 "C101" 49410 "C102" 49411 "C103" 49412 "C104" 48896 "BF00" 48897 "BF01" 48898 "BF02" 48899 "BF03" 48900 "BF04" 48901 "BF05" 48902 "BF06" 48903 "BF07" 48904 "BF08" 48905 "BF09" 48906 "BF0A" 48907 "BF0B" 48908 "BF0C" 48909 "BF0D" 48910 "BF0E" 48911 "BF0F" 48912 "BF10" 48913 "BF11" 48914 "BF12" 48915 "BF13" 48916 "BF14" 48917 "BF15" 48918 "BF16" 48919 "BF17" 48920 "BF18" 48921 "BF19" 48922 "BF1A" 48923 "BF1B" 48924 "BF1C" 48925 "BF1D" 48926 "BF1E" 48927 "BF1F" 48928 "BF20" 48929 "BF21";
 VAL_ 154 F_FOG_RELAY 1 "On" 0 "Off";
 VAL_ 154 Headlight 0 "Off" 2 "TNS" 3 "TNS_Lo" 12 "Hi" 0 "No Description";
 VAL_ 154 Turn 0 "Off" 2 "R" 1 "L" 3 "LR";
@@ -466,3 +509,44 @@ VAL_ 357 MT_Gear_Select 1 "InGear" 2 "Newtral";
 VAL_ 357 CC_Mode_Related 0 "OFF" 1 "ON";
 VAL_ 357 CC_Mode_Related2 0 "OFF" 1 "ON";
 VAL_ 357 MT_Gear_Position 19 "N/1st" 11 "2nd" 7 "3rd" 6 "4th" 5 "5th" 3 "6th";
+SG_MUL_VAL_ 1034 C000_TOTAL_TIME Central_Config_Index 49152-49152;
+SG_MUL_VAL_ 1034 C001_ODO Central_Config_Index 49153-49153;
+SG_MUL_VAL_ 1034 C100_VIN_1_6 Central_Config_Index 49408-49408;
+SG_MUL_VAL_ 1034 C101_VIN_7_12 Central_Config_Index 49409-49409;
+SG_MUL_VAL_ 1034 C102_VIN_13_17 Central_Config_Index 49410-49410;
+SG_MUL_VAL_ 1034 C103 Central_Config_Index 49411-49411;
+SG_MUL_VAL_ 1034 C104 Central_Config_Index 49412-49412;
+SG_MUL_VAL_ 1034 BF00_IG_ON_Timer Central_Config_Index 48896-48896;
+SG_MUL_VAL_ 1034 BF01 Central_Config_Index 48897-48897;
+SG_MUL_VAL_ 1034 BF02 Central_Config_Index 48898-48898;
+SG_MUL_VAL_ 1034 BF03 Central_Config_Index 48899-48899;
+SG_MUL_VAL_ 1034 BF04 Central_Config_Index 48900-48900;
+SG_MUL_VAL_ 1034 BF05 Central_Config_Index 48901-48901;
+SG_MUL_VAL_ 1034 BF06 Central_Config_Index 48902-48902;
+SG_MUL_VAL_ 1034 BF07 Central_Config_Index 48903-48903;
+SG_MUL_VAL_ 1034 BF08 Central_Config_Index 48904-48904;
+SG_MUL_VAL_ 1034 BF09 Central_Config_Index 48905-48905;
+SG_MUL_VAL_ 1034 BF0A Central_Config_Index 48906-48906;
+SG_MUL_VAL_ 1034 BF0B Central_Config_Index 48907-48907;
+SG_MUL_VAL_ 1034 BF0C Central_Config_Index 48908-48908;
+SG_MUL_VAL_ 1034 BF0D Central_Config_Index 48909-48909;
+SG_MUL_VAL_ 1034 BF0E Central_Config_Index 48910-48910;
+SG_MUL_VAL_ 1034 BF0F Central_Config_Index 48911-48911;
+SG_MUL_VAL_ 1034 BF10 Central_Config_Index 48912-48912;
+SG_MUL_VAL_ 1034 BF11 Central_Config_Index 48913-48913;
+SG_MUL_VAL_ 1034 BF12 Central_Config_Index 48914-48914;
+SG_MUL_VAL_ 1034 BF13 Central_Config_Index 48915-48915;
+SG_MUL_VAL_ 1034 BF14 Central_Config_Index 48916-48916;
+SG_MUL_VAL_ 1034 BF15 Central_Config_Index 48917-48917;
+SG_MUL_VAL_ 1034 BF16 Central_Config_Index 48918-48918;
+SG_MUL_VAL_ 1034 BF17 Central_Config_Index 48919-48919;
+SG_MUL_VAL_ 1034 BF18 Central_Config_Index 48920-48920;
+SG_MUL_VAL_ 1034 BF19 Central_Config_Index 48921-48921;
+SG_MUL_VAL_ 1034 BF1A Central_Config_Index 48922-48922;
+SG_MUL_VAL_ 1034 BF1B Central_Config_Index 48923-48923;
+SG_MUL_VAL_ 1034 BF1C Central_Config_Index 48924-48924;
+SG_MUL_VAL_ 1034 BF1D Central_Config_Index 48925-48925;
+SG_MUL_VAL_ 1034 BF1E Central_Config_Index 48926-48926;
+SG_MUL_VAL_ 1034 BF1F Central_Config_Index 48927-48927;
+SG_MUL_VAL_ 1034 BF20 Central_Config_Index 48928-48928;
+SG_MUL_VAL_ 1034 BF21 Central_Config_Index 48929-48929;
