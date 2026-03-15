@@ -2,7 +2,23 @@
 
 日本語はこちらから [README.ja.md](README.ja.md) for Japanese users.
 
-## About This Repository
+## What's CAN DBC?
+
+A nice database that makes raw CAN data readable!
+
+<a href="images/Nice_CAN_DBC.png"  style="display: inline-block; margin-right: 20px;">
+  <img src="images/Nice_CAN_DBC.png" alt="What' CAN DBC" height="400"/>
+</a>
+
+
+A CAN DBC (DBC file) is a **database file format** that defines the relationship between raw CAN bus data (binary frames) and human-readable physical values.  
+It was developed by Vector and is widely used as the **de facto standard** in the automotive industry.
+
+For a detailed explanation, see CSS Electronics:  
+[**A simple intro to DBC**](https://www.csselectronics.com/pages/can-dbc-file-database-intro)
+
+
+## This Repo is for MX-5 2015-2023 (ND1/ND2)
 
 This repository provides [CAN DBC](https://www.csselectronics.com/pages/can-dbc-file-database-intro) files created through independent analysis of CAN bus communications for MAZDA MX-5 2015-2023 (ND1/ND2).
 
@@ -61,13 +77,6 @@ The actual vehicle coverage is consistent between both documents.
 | 2024–           | ND2                    | ND3                              |
 
 
-## What is DBC (CAN DBC)
-
-A CAN DBC (DBC file) is a **database file format** that defines the relationship between raw CAN bus data (binary frames) and human-readable physical values.  
-It was developed by Vector and is widely used as the **de facto standard** in the automotive industry.
-
-For a detailed explanation, see CSS Electronics:  
-[**A simple intro to DBC**](https://www.csselectronics.com/pages/can-dbc-file-database-intro)
 
 ### Tools Supporting DBC
 

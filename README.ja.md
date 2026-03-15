@@ -1,8 +1,20 @@
 # CAN DBC for MAZDA Roadster 2015-2023 (ND1)
 
+## CAN DBC って何？
+
+読めない生のCANデータが「読める」ようになる、ナイスなヤツです！
+
+<a href="images/Nice_CAN_DBC.png"  style="display: inline-block; margin-right: 20px;">
+  <img src="images/Nice_CAN_DBC.png" alt="What' CAN DBC" height="400"/>
+</a>
+
+CAN DBC（DBC ファイル）は、CAN バス上で送受信される生データ（バイナリ）と人間が読める値（物理量）を対応付ける **データベース形式ファイル** です。  
+Vector 社によって開発され、自動車業界でデファクトスタンダードとして広く使われています。
+
+詳しくは CSS Electronics [**a simple intro to DBC**](https://www.csselectronics.com/pages/can-dbc-file-database-intro) をどうぞ
 
 
-## このリポジトリについて
+## このRepoは ロードスター 2015-2013(ND1) 用です
 
 このリポジトリは、マツダ ロードスター 2015-2023(ND1) における CAN 通信を解析し、  
 その結果を [DBC形式](https://www.csselectronics.com/pages/can-dbc-file-database-intro) にまとめて公開するためのものです。
@@ -57,12 +69,6 @@ Issue による指摘や情報共有、検証結果に基づく Pull Request を
 
 
 
-## DBC（CAN DBC）とは何か
-
-CAN DBC（DBC ファイル）は、CAN バス上で送受信される生データ（バイナリ）と人間が読める値（物理量）を対応付ける **データベース形式ファイル** です。  
-Vector 社によって開発され、自動車業界でデファクトスタンダードとして広く使われています。
-
-詳しくは CSS Electronics [**a simple intro to DBC**](https://www.csselectronics.com/pages/can-dbc-file-database-intro) をどうぞ
 
 ### DBC 対応ツール
 
