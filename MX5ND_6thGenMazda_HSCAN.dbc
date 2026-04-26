@@ -263,6 +263,7 @@ BO_ 357 HS_PCM: 8 HS_PCM
 
 BO_ 358 HS_PCM: 8 HS_PCM
    SG_ BBP_Brake_Booster_Pressure_2 : 11|12@0+ (0.1,0) [0|1] "kPa" Vector__XXX
+   SG_ BARO_Barometric_pressure : 35|12@0+ (0.1,-267) [0|1] "kPa" Vector__XXX
 
 BO_ 304 HS_PCM: 8 HS_PCM
 
@@ -283,6 +284,7 @@ BO_ 543 HS_PCM: 8 HS_PCM
 BO_ 1056 HS_PCM: 8 HS_PCM
    SG_ CoolantTemp : 7|8@0+ (1,-40) [0|1] "degC" Vector__XXX
    SG_ AmbientTemp : 55|16@0+ (0.25,-3200) [0|1] "degC" Vector__XXX
+   SG_ Travel_distance_related : 15|8@0+ (1,0) [0|1] "" Vector__XXX
 
 BO_ 1067 HS_PCM: 8 HS_PCM
 
