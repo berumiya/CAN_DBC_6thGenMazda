@@ -45,11 +45,15 @@ BO_ 0 LIN_Autolight_Rain_Humidity: 8 LIN_Autolight_Rain_Humidity
    SG_ HL_CS_TNS_RLS_1 : 3|1@0+ (1,0) [0|1] "" Vector__XXX
    SG_ HL_CS_TNS_RLS_2 : 15|2@0+ (1,0) [0|1] "" Vector__XXX
 
-BO_ 1 LIN_BCMM: 8 LIN_BCMM
+BO_ 1 LIN_BCMM: 2 LIN_BCMM
 
-BO_ 32 LIN_BCMM: 8 LIN_BCMM
+BO_ 32 LIN_BCMM: 5 LIN_BCMM
+   SG_ FrontWiperSwitchPosition : 1|2@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ FrontWasherSwitchPosition : 2|1@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ FrontWiperAutoLevel : 10|3@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ AutolightSensitivityRequest : 35|4@0+ (1,0) [0|1] "" Vector__XXX
 
-BO_ 35 LIN_BCMM: 8 LIN_BCMM
+BO_ 35 LIN_BCMM: 4 LIN_BCMM
 
 BO_ 2448 LICENSE: 8 Vector__XXX
    SG_ License : 0|1@0+ (1,0) [0|1] "License: CC-BY 4.0" Vector__XXX
@@ -65,3 +69,6 @@ CM_ SG_ 0 LIGHT_SEN_Upper3bit "Light_Sensor_Value_Upper3bit";
 CM_ SG_ 0 HL_CS_TNS_RLS_1 "Control_Signal_of_Headlight_or_TNS_from_Light_Sensor_1";
 CM_ SG_ 0 HL_CS_TNS_RLS_2 "Control_Signal_of_Headlight_or_TNS_from_Light_Sensor_2";
 VAL_ 0 WIP_CS_RLS 0 "Off" 1 "Single_Wipe";
+VAL_ 32 FrontWiperSwitchPosition 0 "Off" 1 "Auto" 2 "Lo" 3 "Hi";
+VAL_ 32 FrontWasherSwitchPosition 0 "Off" 1 "On" 0 "" 0 "";
+VAL_ 32 AutolightSensitivityRequest 0 "ExtraLow(JapanOnly)" 1 "Low(JapanOnly)" 2 "Standard(JapanOnly)" 3 "High(JapanOnly)" 4 "ExtraHigh(JapanOnly)" 5 "Unknown" 6 "ExtraLow(ExceptJapan)" 7 "Low(AllOthers)" 8 "Standard(AllOthers)" 9 "High(ExceptJapan))" 10 "ExtraHigh(ExeptJapan)";
