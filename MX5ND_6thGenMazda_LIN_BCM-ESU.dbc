@@ -1,0 +1,159 @@
+VERSION "berumiya 990S labo"
+CM_ "License: CC-BY 4.0";
+CM_ "Repository : https://github.com/berumiya/CAN_DBC_6thGenMazda";
+CM_ "Decoded and maintained by berumiya 990S labo";
+CM_ "Source : reverse-engineered CAN traffic.";
+
+NS_ :
+    NS_DESC_
+    CM_
+    BA_DEF_
+    BA_
+    VAL_
+    CAT_DEF_
+    CAT_
+    FILTER
+    BA_DEF_DEF_
+    EV_DATA_
+    ENVVAR_DATA_
+    SGTYPE_
+    SGTYPE_VAL_
+    BA_DEF_SGTYPE_
+    BA_SGTYPE_
+    SIG_TYPE_REF_
+    VAL_TABLE_
+    SIG_GROUP_
+    SIG_VALTYPE_
+    SIGTYPE_VALTYPE_
+    BO_TX_BU_
+    BA_DEF_REL_
+    BA_REL_
+    BA_DEF_DEF_REL_
+    BU_SG_REL_
+    BU_EV_REL_
+    BU_BO_REL_
+    SG_MUL_VAL_
+
+BS_: 
+BU_: LIN_BCMM LIN_ESU 
+BO_ 016 LIN_BCMM: 8 LIN_BCMM
+   SG_ DR_LK_RY : 49|1@0+ (1,0) [0|1] "" LIN_BCMM
+   SG_ DR_UNLK_RY : 48|1@0+ (1,0) [0|1] "" LIN_BCMM
+   SG_ REVERSE_LAMP : 30|1@0+ (1,0) [0|1] "" LIN_BCMM
+   SG_ ROOM_LAMP : 33|1@0+ (1,0) [0|1] "" LIN_BCMM
+   SG_ TRUNK_LAMP : 32|1@0+ (1,0) [0|1] "" LIN_BCMM
+   SG_ TRUNK_MOTOR : 51|1@0+ (1,0) [0|1] "" LIN_BCMM
+   SG_ WASHER_CTRL : 43|1@0+ (1,0) [0|1] "" LIN_BCMM
+   SG_ WIP_R_CTRL : 42|3@0+ (1,0) [0|1] "" LIN_BCMM
+   SG_ WASHER_R_CTRL : 44|1@0+ (1,0) [0|1] "" LIN_BCMM
+   SG_ R_FOG_LAMP : 28|1@0+ (1,0) [0|1] "" LIN_BCMM
+   SG_ HL_TNS_1 : 29|1@0+ (1,0) [0|1] "" LIN_BCMM
+   SG_ HL_TNS_2 : 27|2@0+ (1,0) [0|1] "" LIN_BCMM
+   SG_ HL_LOW_1 : 18|1@0+ (1,0) [0|1] "" LIN_BCMM
+   SG_ HL_LOW_2 : 22|2@0+ (1,0) [0|1] "" LIN_BCMM
+   SG_ HL_HI_1 : 10|1@0+ (1,0) [0|1] "" LIN_BCMM
+   SG_ HL_HI_2 : 14|2@0+ (1,0) [0|1] "" LIN_BCMM
+   SG_ HL_PASS : 15|1@0+ (1,0) [0|1] "" LIN_BCMM
+   SG_ SequenceCounter1_maybe : 55|4@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ SequenceCounter2_maybe : 63|8@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ HL_DRL : 24|1@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 017 LIN_ESU: 8 LIN_ESU
+   SG_ DR_LK_RY : 33|1@0+ (1,0) [0|1] "" LIN_ESU
+   SG_ DR_UNLK_RY : 32|1@0+ (1,0) [0|1] "" LIN_ESU
+   SG_ HL_HI_1 : 2|1@0+ (1,0) [0|1] "" LIN_ESU
+   SG_ HL_HI_2 : 0|1@0+ (1,0) [0|1] "" LIN_ESU
+   SG_ HL_LOW_1 : 6|1@0+ (1,0) [0|1] "" LIN_ESU
+   SG_ HL_LOW_2 : 4|1@0+ (1,0) [0|1] "" LIN_ESU
+   SG_ HL_TNS_1 : 12|1@0+ (1,0) [0|1] "" LIN_ESU
+   SG_ HL_TNS_2 : 10|1@0+ (1,0) [0|1] "" LIN_ESU
+   SG_ R_FOG_LAMP : 14|1@0+ (1,0) [0|1] "" LIN_ESU
+   SG_ REVERSE_LAMP : 18|1@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ ROOM_LAMP : 20|1@0+ (1,0) [0|1] "" LIN_ESU
+   SG_ TRUNK_LAMP : 22|1@0+ (1,0) [0|1] "" LIN_ESU
+   SG_ TRUNK_MOTOR : 35|1@0+ (1,0) [0|1] "" LIN_ESU
+   SG_ WASHER_CTRL : 27|1@0+ (1,0) [0|1] "" LIN_ESU
+   SG_ WASHER_R_CTRL : 28|1@0+ (1,0) [0|1] "" LIN_ESU
+   SG_ WIP_R_CTRL : 24|1@0+ (1,0) [0|1] "" LIN_ESU
+   SG_ WASHER_FR_CTRL_Error : 29|1@0+ (1,0) [0|1] "" LIN_ESU
+   SG_ WIP_R_CTRL_Error : 25|1@0+ (1,0) [0|1] "" LIN_ESU
+   SG_ HL_TNS_3 : 16|1@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ HL_DRL : 8|1@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 060 LIN_BCMM_DIAG: 8 LIN_BCMM
+
+BO_ 061 LIN_ESU_DIAG: 8 LIN_ESU
+
+BO_ 2448 LICENSE: 8 LICENSE
+   SG_ License : 0|1@0+ (1,0) [0|1] "License: CC-BY 4.0" Vector__XXX
+   SG_ Repository : 1|1@0+ (1,0) [0|1] "https://github.com/berumiya/CAN_DBC_6thGenMazda" Vector__XXX
+   SG_ DecodedBy : 2|1@0+ (1,0) [0|1] "Decoded and maintained by berumiya 990S labo" Vector__XXX
+   SG_ Source : 3|1@0+ (1,0) [0|1] "reverse-engineered CAN traffic." Vector__XXX
+
+CM_ SG_ 016 DR_LK_RY "Control_Request_of_Door_Lock_Relay_to_ESU";
+CM_ SG_ 016 DR_UNLK_RY "Control_Request_of_Door_Unlock_Relay_to_ESU";
+CM_ SG_ 016 REVERSE_LAMP "Control_Request_of_Reverse_Lamp_to_ESU";
+CM_ SG_ 016 ROOM_LAMP "Control_Request_of_Room_Lamp_to_ESU";
+CM_ SG_ 016 TRUNK_LAMP "Control_Request_of_Trunk_Cargo_Compartment_Light_to_ESU";
+CM_ SG_ 016 TRUNK_MOTOR "Control_Request_of_Trunk_Liftgate_Electric_Latch_Motor_to_ESU";
+CM_ SG_ 016 WASHER_CTRL "Front_Washer_Control_Request_to_ESU";
+CM_ SG_ 016 WIP_R_CTRL "Rear_Wiper_Control_Request_to_ESU";
+CM_ SG_ 016 WASHER_R_CTRL "Front_Washer_Control_Request_to_ESU";
+CM_ SG_ 016 R_FOG_LAMP "Control_Request_of_Rear_Fog_Lamp_to_ESU";
+CM_ SG_ 016 HL_TNS_1 "Position_Lamp(Tail-Number-Side)_Control_Request_to_ESU";
+CM_ SG_ 016 HL_TNS_2 "Position_Lamp(Tail-Number-Side)_Control_Request_to_ESU";
+CM_ SG_ 016 HL_LOW_1 "Headlight_Lo-Beam_Control_Request_to_ESU";
+CM_ SG_ 016 HL_LOW_2 "Headlight_Lo-Beam_Control_Request_to_ESU";
+CM_ SG_ 016 HL_HI_1 "Headlight_Hi-Beam_Control_Request_to_ESU";
+CM_ SG_ 016 HL_HI_2 "Headlight_Hi-Beam_Control_Request_to_ESU";
+CM_ SG_ 016 HL_PASS "Headlight_Passing_Control_Request_to_ESU";
+CM_ SG_ 016 HL_DRL "Daytime_Running_Lamps_Control_Request_to_ESU";
+CM_ SG_ 017 DR_LK_RY "Control_Response_of_Door_Lock_Relay_from_ESU";
+CM_ SG_ 017 DR_UNLK_RY "Control_Response_of_Door_Unlock_Relay_from_ESU";
+CM_ SG_ 017 HL_HI_1 "Headlight_Hi-Beam_Control_Response_from_ESU";
+CM_ SG_ 017 HL_HI_2 "Headlight_Hi-Beam_Control_Response_from_ESU";
+CM_ SG_ 017 HL_LOW_1 "Headlight_Lo-Beam_Control_Response_from_ESU";
+CM_ SG_ 017 HL_LOW_2 "Headlight_Lo-Beam_Control_Response_from_ESU";
+CM_ SG_ 017 HL_TNS_1 "Position_Lamp(Tail-Number-Side)_Control_Response_from_ESU";
+CM_ SG_ 017 HL_TNS_2 "Position_Lamp(Tail-Number-Side)_Control_Response_from_ESU";
+CM_ SG_ 017 R_FOG_LAMP "Control_Response_of_Rear_Fog_Lamp_from_ESU";
+CM_ SG_ 017 REVERSE_LAMP "Control_Response_of_Reverse_Lamp_from_ESU";
+CM_ SG_ 017 ROOM_LAMP "Control_Response_of_Room_Lamp_from_ESU";
+CM_ SG_ 017 TRUNK_LAMP "Control_Response_of_Trunk_Cargo_Compartment_Light_from_ESU";
+CM_ SG_ 017 TRUNK_MOTOR "Control_Response_of_Trunk_Liftgate_Electric_Latch_Motor_from_ESU";
+CM_ SG_ 017 WASHER_CTRL "Control_Response_of_Front_Washer_from_ESU";
+CM_ SG_ 017 WASHER_R_CTRL "Control_Response_of_Front_Washer_from_ESU";
+CM_ SG_ 017 WIP_R_CTRL "Control_Response_of_Rear_Wiper_from_ESU";
+CM_ SG_ 017 WASHER_FR_CTRL_Error "Error_Response_of_FR_Washer_from_ESU";
+CM_ SG_ 017 WIP_R_CTRL_Error "Error_Response_of_Rear_Wiper_from_ESU";
+CM_ SG_ 017 HL_TNS_3 "Position_Lamp(Tail-Number-Side)_Control_Response_from_ESU";
+CM_ SG_ 017 HL_DRL "Daytime_Running_Lamps_Control_Response_from_ESU";
+VAL_ 016 DR_LK_RY 0 "Off" 1 "On";
+VAL_ 016 DR_UNLK_RY 0 "Off" 1 "On";
+VAL_ 016 REVERSE_LAMP 0 "Off" 1 "On";
+VAL_ 016 ROOM_LAMP 0 "Off" 1 "100%_On";
+VAL_ 016 TRUNK_LAMP 0 "Off" 1 "On";
+VAL_ 016 TRUNK_MOTOR 0 "Off" 1 "On";
+VAL_ 016 WASHER_CTRL 0 "Off" 1 "On";
+VAL_ 016 WIP_R_CTRL 0 "Off" 1 "INT" 2 "On" 3 "On_1Time" 4 "On_2Time" 5 "On_3Time" 6 "On_4Time";
+VAL_ 016 WASHER_R_CTRL 0 "Off" 1 "On";
+VAL_ 016 R_FOG_LAMP 0 "Off" 1 "On" 0 "" 0 "" 0 "" 0 "" 0 "";
+VAL_ 016 HL_TNS_1 0 "Off" 1 "On";
+VAL_ 016 HL_TNS_2 0 "Off" 3 "On_LR";
+VAL_ 016 HL_LOW_1 0 "Off" 1 "On_100%";
+VAL_ 016 HL_LOW_2 0 "Off" 3 "On_LR";
+VAL_ 016 HL_HI_1 0 "Off" 1 "On_100%";
+VAL_ 016 HL_HI_2 0 "Off" 3 "On_LR";
+VAL_ 016 HL_PASS 0 "Off" 1 "On";
+VAL_ 017 DR_LK_RY 0 "Off" 1 "On";
+VAL_ 017 DR_UNLK_RY 0 "Off" 1 "On";
+VAL_ 017 R_FOG_LAMP 0 "Off" 1 "On";
+VAL_ 017 REVERSE_LAMP 0 "Off" 1 "On";
+VAL_ 017 ROOM_LAMP 0 "Off" 1 "100%_On";
+VAL_ 017 TRUNK_LAMP 0 "Off" 1 "On";
+VAL_ 017 TRUNK_MOTOR 0 "Off" 1 "On";
+VAL_ 017 WASHER_CTRL 0 "Off" 1 "On";
+VAL_ 017 WASHER_R_CTRL 0 "Off" 1 "On";
+VAL_ 017 WIP_R_CTRL 0 "Off" 1 "On";
+VAL_ 017 WASHER_FR_CTRL_Error 0 "Normal" 1 "Disconnection";
+VAL_ 017 WIP_R_CTRL_Error 0 "Normal" 1 "Disconnection";

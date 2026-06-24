@@ -1,0 +1,67 @@
+VERSION "berumiya 990S labo"
+CM_ "License: CC-BY 4.0";
+CM_ "Repository : https://github.com/berumiya/CAN_DBC_6thGenMazda";
+CM_ "Decoded and maintained by berumiya 990S labo";
+CM_ "Source : reverse-engineered CAN traffic.";
+
+NS_ :
+    NS_DESC_
+    CM_
+    BA_DEF_
+    BA_
+    VAL_
+    CAT_DEF_
+    CAT_
+    FILTER
+    BA_DEF_DEF_
+    EV_DATA_
+    ENVVAR_DATA_
+    SGTYPE_
+    SGTYPE_VAL_
+    BA_DEF_SGTYPE_
+    BA_SGTYPE_
+    SIG_TYPE_REF_
+    VAL_TABLE_
+    SIG_GROUP_
+    SIG_VALTYPE_
+    SIGTYPE_VALTYPE_
+    BO_TX_BU_
+    BA_DEF_REL_
+    BA_REL_
+    BA_DEF_DEF_REL_
+    BU_SG_REL_
+    BU_EV_REL_
+    BU_BO_REL_
+    SG_MUL_VAL_
+
+BS_: 
+BU_: LIN_BCMM LIN_Autolight_Rain_Humidity 
+BO_ 0 LIN_Autolight_Rain_Humidity: 8 LIN_Autolight_Rain_Humidity
+   SG_ REL_HUM_Upper5bit : 28|5@0+ (4,0) [0|1] "%" Vector__XXX
+   SG_ REL_HUM_Lower3bit : 23|3@0+ (0.5,0) [0|1] "%" Vector__XXX
+   SG_ WIP_CS_RLS : 0|1@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ LIGHT_SEN_Lower2bit : 54|2@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ LIGHT_SEN_Upper3bit : 62|3@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ HL_CS_TNS_RLS_1 : 3|1@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ HL_CS_TNS_RLS_2 : 15|2@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 1 LIN_BCMM: 8 LIN_BCMM
+
+BO_ 32 LIN_BCMM: 8 LIN_BCMM
+
+BO_ 35 LIN_BCMM: 8 LIN_BCMM
+
+BO_ 2448 LICENSE: 8 Vector__XXX
+   SG_ License : 0|1@0+ (1,0) [0|1] "License: CC-BY 4.0" Vector__XXX
+   SG_ Repository : 1|1@0+ (1,0) [0|1] "https://github.com/berumiya/CAN_DBC_6thGenMazda" Vector__XXX
+   SG_ DecodedBy : 2|1@0+ (1,0) [0|1] "Decoded and maintained by berumiya 990S labo" Vector__XXX
+   SG_ Source : 3|1@0+ (1,0) [0|1] "reverse-engineered CAN traffic." Vector__XXX
+
+CM_ SG_ 0 REL_HUM_Upper5bit "Relative_Humidity_Upper5bit";
+CM_ SG_ 0 REL_HUM_Lower3bit "Relative_Humidity_Lower3bit";
+CM_ SG_ 0 WIP_CS_RLS "Control_Signal_of_Wiper_from_Rain_Sensor";
+CM_ SG_ 0 LIGHT_SEN_Lower2bit "Light_Sensor_Value_Lower2bit";
+CM_ SG_ 0 LIGHT_SEN_Upper3bit "Light_Sensor_Value_Upper3bit";
+CM_ SG_ 0 HL_CS_TNS_RLS_1 "Control_Signal_of_Headlight_or_TNS_from_Light_Sensor_1";
+CM_ SG_ 0 HL_CS_TNS_RLS_2 "Control_Signal_of_Headlight_or_TNS_from_Light_Sensor_2";
+VAL_ 0 WIP_CS_RLS 0 "Off" 1 "Single_Wipe";
