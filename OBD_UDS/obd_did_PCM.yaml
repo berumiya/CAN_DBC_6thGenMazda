@@ -1,0 +1,1411 @@
+meta:
+  ecu: PCM
+  request_id: '0x7E0'
+  response_id: '0x7E8'
+  dbc_message: OBD2_PCM
+  generated: '2026-07-15'
+services:
+  '0x22':
+    name: ReadDataByIdentifier
+    dids:
+    - did: '0301'
+      data_length_bytes: 2
+      category: manufacturer
+      signals:
+      - name: MAP_V
+        scale: 0.0009765625
+        scale_expr: 1/1024
+        offset: 0.0
+        unit: V
+        meaning: Manifold absolute pressure sensor [V]
+        confidence: guess
+    - did: '0304'
+      data_length_bytes: 2
+      category: manufacturer
+      signals:
+      - name: GENVDSD
+        scale: 0.00048828125
+        scale_expr: 1/2048
+        offset: 0.0
+        unit: V
+        meaning: Generator voltage desired [V]
+        confidence: guess
+    - did: '0308'
+      data_length_bytes: 2
+      category: manufacturer
+      signals:
+      - name: ARPMDES
+        scale: 1.0
+        offset: 0.0
+        unit: rpm
+        meaning: Desired RPM [rpm]
+        confidence: guess
+    - did: '0314'
+      data_length_bytes: 1
+      category: manufacturer
+      signals:
+      - name: MAF_V
+        scale: 0.0009765625
+        scale_expr: 1/1024
+        offset: 0.0
+        unit: V
+        meaning: Mass Air Flow [V]
+        confidence: guess
+    - did: '0317'
+      data_length_bytes: 2
+      category: manufacturer
+      signals:
+      - name: VT_EX_DUTY
+        meaning: Exhaust Camshaft Position Duty Cycle1 [%]
+        confidence: tbc
+    - did: '0318'
+      data_length_bytes: 2
+      category: manufacturer
+      signals:
+      - name: VT_IN_ACT
+        scale: 0.0625
+        scale_expr: 16/256
+        offset: 0.0
+        unit: deg
+        meaning: Actual Intake Variable Valve Timing Control - Advance Amount from Max Retard Position
+          [deg]
+        confidence: guess
+    - did: '0319'
+      data_length_bytes: 2
+      category: manufacturer
+      signals:
+      - name: VT_EX_ACT
+        meaning: Actual Exhaust Variable Valve Timing Control - Retard Amount from Max Advance Position
+          [deg]
+        confidence: tbc
+    - did: '031C'
+      data_length_bytes: 2
+      category: manufacturer
+      signals:
+      - name: VT_IN_DES
+        scale: 0.0625
+        scale_expr: 16/256
+        offset: 0.0
+        unit: deg
+        meaning: Target Intake Variable Valve Timing Control - Advance Amount from Max Retard Position
+          [deg]
+        confidence: guess
+    - did: '0321'
+      data_length_bytes: 2
+      category: manufacturer
+      signals:
+      - name: VT_EX_DES
+        meaning: Target Exhaust Variable Valve Timing Control - Retard Amount from Max Advance Position
+          [deg]
+        confidence: tbc
+    - did: '0324'
+      data_length_bytes: 2
+      category: manufacturer
+      signals:
+      - name: FUEL_PRES
+        scale: 0.0048828125
+        scale_expr: 5/1024
+        offset: 0.0
+        unit: V
+        meaning: Fuel pressure sensor [V] / at Fuel Rail
+        confidence: guess
+    - did: '032B'
+      data_length_bytes: 1
+      category: manufacturer
+      signals:
+      - name: APP
+        start_byte: 0
+        start_bit: 0
+        bit_length: 8
+        signed: false
+        scale: 0.5
+        scale_expr: 1/2
+        offset: 0.0365
+        unit: '%'
+        meaning: Accelerator Pedal Position [%]
+        confidence: measured
+        r2: 0.99983
+    - did: '034E'
+      data_length_bytes: 2
+      category: manufacturer
+      signals:
+      - name: IAT2
+        scale: 0.0048828125
+        scale_expr: 5/1024
+        offset: 0.0
+        unit: V
+        meaning: Intake Air Temperature 2 [V] / Sensor voltage of IAT12
+        confidence: guess
+    - did: '0357'
+      data_length_bytes: 2
+      category: manufacturer
+      signals:
+      - name: ECT_V
+        scale: 0.0048828125
+        scale_expr: 5/1024
+        offset: 0.0
+        unit: V
+        meaning: Engine coolant temperature sensor voltage [V]
+        confidence: guess
+    - did: '035D'
+      data_length_bytes: 5
+      category: manufacturer
+      bit_encoded: true
+      signals:
+      - name: CHRGLP
+        meaning: Generator Warning Light [On/Off]
+        confidence: tbc
+    - did: '0366'
+      data_length_bytes: 2
+      category: manufacturer
+      signals:
+      - name: TPCT
+        scale: 0.0048828125
+        scale_expr: 5/1024
+        offset: 0.0
+        unit: V
+        meaning: Lowest Closed Throttle Voltage [V]
+        confidence: guess
+    - did: '0367'
+      data_length_bytes: 2
+      category: manufacturer
+      signals:
+      - name: TPCT2
+        scale: 0.0048828125
+        scale_expr: 5/1024
+        offset: 0.0
+        unit: V
+        meaning: Lowest Closed Throttle Voltage - Sensor2 [V]
+        confidence: guess
+    - did: '036C'
+      data_length_bytes: 2
+      category: manufacturer
+      signals:
+      - name: FUELPW
+        meaning: Fuel Pulse Width [ms]
+        confidence: tbc
+    - did: '0378'
+      data_length_bytes: 2
+      category: manufacturer
+      signals:
+      - name: ALTF_ACT
+        meaning: Generator field current control duty signal Actual [%]
+        confidence: tbc
+    - did: '0393'
+      data_length_bytes: 2
+      category: manufacturer
+      signals:
+      - name: AC_PRESS
+        scale: 1.0
+        offset: 0.0
+        unit: kPa
+        meaning: A/C Pressure Sensor [kPa]
+        confidence: guess
+    - did: '03A1'
+      data_length_bytes: 1
+      category: manufacturer
+      signals:
+      - name: HTR11
+        meaning: Heated Exhaust Gas Oxygen Sensor Heater (bank 1, sensor 1) [%]
+        confidence: tbc
+    - did: '03A2'
+      data_length_bytes: 1
+      category: manufacturer
+      signals:
+      - name: HTR12
+        meaning: Heated Exhaust Gas Oxygen Sensor Heater (bank 1, sensor 2) [%]
+        confidence: tbc
+    - did: '03A9'
+      data_length_bytes: 4
+      category: manufacturer
+      signals:
+      - name: HTR11
+        meaning: Heated Exhaust Gas Oxygen Sensor Heater (bank 1, sensor 1) [Off/On]
+        confidence: tbc
+      - name: HTR12
+        meaning: Heated Exhaust Gas Oxygen Sensor Heater (bank 1, sensor 2) [Off/On]
+        confidence: tbc
+    - did: '03B5'
+      data_length_bytes: 2
+      category: manufacturer
+      signals:
+      - name: OIL_TEMP
+        scale: 0.0009765625
+        scale_expr: 1/1024
+        offset: 0.0
+        unit: V
+        meaning: Engine Oil Temperature [V]
+        confidence: guess
+    - did: '03B9'
+      data_length_bytes: 2
+      category: manufacturer
+      signals:
+      - name: FANDC
+        scale: 0.0030517578125
+        scale_expr: 100/32768
+        offset: 0.0
+        unit: '%'
+        meaning: Variable Fan Duty Cycle [%]
+        confidence: guess
+    - did: '03BD'
+      data_length_bytes: 2
+      category: manufacturer
+      signals:
+      - name: RO2FT1
+        meaning: Reqr O2 Fuel Trim - Bank 1 [%]
+        confidence: tbc
+    - did: '03DC'
+      data_length_bytes: 2
+      category: manufacturer
+      signals:
+      - name: FUEL_P_DSD
+        scale: 10.0
+        offset: 0.0
+        unit: kPa
+        meaning: Fuel Pressure Desired [kPa]
+        confidence: guess
+    - did: '03E8'
+      data_length_bytes: 2
+      category: manufacturer
+      signals:
+      - name: LRN_KCS
+        meaning: KCS Learning Value [--]
+        confidence: tbc
+    - did: '03EC'
+      data_length_bytes: 2
+      category: manufacturer
+      signals:
+      - name: KNOCKR
+        meaning: Knocking Retard [deg]
+        confidence: tbc
+    - did: '0415'
+      data_length_bytes: 2
+      category: manufacturer
+      signals:
+      - name: EOP
+        scale: 1.0
+        offset: 0.0
+        unit: kPa
+        meaning: Engine Oil Pressure [kPa]
+        confidence: guess
+    - did: '0416'
+      data_length_bytes: 4
+      category: manufacturer
+      bit_encoded: true
+      signals:
+      - name: (unnamed)
+        meaning: Low Oil Pressure (Switch) [--] / Never Detected / Detected
+        confidence: tbc
+      - name: PN_SW
+        meaning: Parking/Neutral Switch [--] / Open / Closed
+        confidence: tbc
+    - did: '0424'
+      data_length_bytes: 2
+      category: manufacturer
+      signals:
+      - name: OIL_PRES
+        scale: 0.0009765625
+        scale_expr: 1/1024
+        offset: 0.0
+        unit: V
+        meaning: Engine Oil Pressure [V]
+        confidence: guess
+    - did: '042F'
+      data_length_bytes: 1
+      category: manufacturer
+      signals:
+      - name: D_IEV_CST
+        meaning: Deactivation / Intake Valve And Exhaust Valve Control Status [On/Off]
+        confidence: tbc
+    - did: '053B'
+      data_length_bytes: 39
+      category: manufacturer
+      signals:
+      - name: MF_CAT1
+        meaning: Cylinder 1 Misfire Counts For Catalyst Damage [--]
+        confidence: tbc
+      - name: MF_CAT_2
+        meaning: Cylinder 2 Misfire Counts For Catalyst Damage [--]
+        confidence: tbc
+      - name: MF_CAT_3
+        meaning: Cylinder 3 Misfire Counts For Catalyst Damage [--]
+        confidence: tbc
+      - name: MF_CAT_4
+        meaning: Cylinder 4 Misfire Counts For Catalyst Damage [--]
+        confidence: tbc
+      - name: MF_CAT_FCC
+        meaning: Firing Cycle Counter (Catalyst) [--]
+        confidence: tbc
+      - name: MF_CAT_TTL
+        meaning: Total Misfire Counts For Catalyst Damage During This Trip [--]
+        confidence: tbc
+      - name: MF_EMI1
+        meaning: Cylinder 1 Misfire Counts For Emissions Failure [--]
+        confidence: tbc
+      - name: MF_EMI_2
+        meaning: Cylinder 2 Misfire Counts For Emissions Failure [--]
+        confidence: tbc
+      - name: MF_EMI_3
+        meaning: Cylinder 3 Misfire Counts For Emissions Failure [--]
+        confidence: tbc
+      - name: MF_EMI_4
+        meaning: Cylinder 4 Misfire Counts For Emissions Failure [--]
+        confidence: tbc
+      - name: MF_EMI_FCC
+        meaning: Firing Cycle Counter (Emissions) [--]
+        confidence: tbc
+      - name: MF_EMI_TTL
+        meaning: Total Misfire Counts For Emissions Failure During This Trip [--]
+        confidence: tbc
+    - did: '057D'
+      data_length_bytes: 2
+      category: manufacturer
+      signals:
+      - name: AMB_TEMP
+        scale: 0.5
+        offset: -40.0
+        unit: degC
+        meaning: Ambiend air temperature [degC]
+        confidence: guess
+    - did: '0594'
+      data_length_bytes: 2
+      category: manufacturer
+      signals:
+      - name: OIL_P_DUTY
+        meaning: Engine Oil Pressure Control Circuit Duty Cycle [%]
+        confidence: tbc
+    - did: '0700'
+      data_length_bytes: 4
+      category: manufacturer
+      signals:
+      - name: IMRC
+        meaning: Intake Manifold Runner Control [Off/On]
+        confidence: tbc
+      - name: IMTV
+        meaning: Intake Manifold Tuning Valve [Off/On]
+        confidence: tbc
+    - did: '0914'
+      data_length_bytes: 2
+      category: manufacturer
+      signals:
+      - name: APP1
+        start_byte: 0
+        start_bit: 0
+        bit_length: 16
+        byte_order: big
+        signed: false
+        scale: 0.0009765625
+        scale_expr: 1/1024
+        offset: 0
+        unit: V
+        meaning: Accelerator pedal position sensor 1 [V]
+        confidence: measured
+        r2: 0.99986
+    - did: '0915'
+      data_length_bytes: 2
+      category: manufacturer
+      signals:
+      - name: APP2
+        start_byte: 0
+        start_bit: 0
+        bit_length: 16
+        byte_order: big
+        signed: false
+        scale: 0.0009765625
+        scale_expr: 1/1024
+        offset: -0.0027
+        unit: V
+        meaning: Accelerator pedal position sensor 2 [V]
+        confidence: measured
+        r2: 0.99985
+    - did: '0917'
+      data_length_bytes: 2
+      category: manufacturer
+      signals:
+      - name: TP1
+        start_byte: 0
+        start_bit: 0
+        bit_length: 16
+        byte_order: big
+        signed: false
+        scale: 0.0009765625
+        scale_expr: 1/1024
+        offset: 0.0072
+        unit: V
+        meaning: Throttle Position Sensor 1 [V]
+        confidence: measured
+        r2: 0.99988
+    - did: '0918'
+      data_length_bytes: 2
+      category: manufacturer
+      signals:
+      - name: TP2
+        start_byte: 0
+        start_bit: 0
+        bit_length: 16
+        byte_order: big
+        signed: false
+        scale: 0.0009765625
+        scale_expr: 1/1024
+        offset: 0.0035
+        unit: V
+        meaning: Throttle Position Sensor 2 [V]
+        confidence: measured
+        r2: 0.99988
+    - did: '091A'
+      data_length_bytes: 2
+      category: manufacturer
+      signals:
+      - name: ISV_DSD
+        scale: 0.001953125
+        scale_expr: 2/1024
+        offset: 0.0
+        unit: deg
+        meaning: Intake Shatter Valve Control Desired [deg]
+        confidence: guess
+    - did: '091B'
+      data_length_bytes: 1
+      category: manufacturer
+      signals:
+      - name: (unnamed)
+        meaning: Idle Validation Switch, IVS [--] Off Idle / Idle
+        confidence: tbc
+    - did: '093C'
+      data_length_bytes: 2
+      category: manufacturer
+      signals:
+      - name: ETC_ACT
+        start_byte: 0
+        start_bit: 0
+        bit_length: 16
+        byte_order: big
+        signed: false
+        scale: 0.001953125
+        scale_expr: 2/1024
+        offset: 0.0191
+        unit: deg
+        meaning: Electronic Throttle Control Actual angle [deg]
+        confidence: measured
+        r2: 0.9999
+    - did: '099B'
+      data_length_bytes: 2
+      category: manufacturer
+      bit_encoded: true
+      signals:
+      - name: ACCS
+        meaning: Air Conditioning Compressor Cycling Switch [On/Off]
+        confidence: tbc
+      - name: FAN1
+        meaning: FAN1 Control Signal [Off/On]
+        confidence: tbc
+      - name: FAN2
+        meaning: FAN2 Control Signal [Off/On]
+        confidence: tbc
+      - name: FAN3
+        meaning: FAN3 Control Signal [Off/On]
+        confidence: tbc
+      - name: AC_REQ
+        meaning: A/C Request Signal Status [On/Off]
+        confidence: tbc
+    - did: '1166'
+      data_length_bytes: 2
+      category: manufacturer
+      signals:
+      - name: EVAPCP
+        meaning: Evaporative Emission Canister Purge Valve duty cycle [%]
+        confidence: tbc
+    - did: '1279'
+      data_length_bytes: 2
+      category: manufacturer
+      signals:
+      - name: IAT
+        scale: 0.0048828125
+        scale_expr: 5/1024
+        offset: 0.0
+        unit: V
+        meaning: Intake Air Temperature No.1 [V]
+        confidence: guess
+    - did: '1310'
+      data_length_bytes: 2
+      category: manufacturer
+      signals:
+      - name: EOT
+        meaning: Engine Oil Temperature [degC]
+        confidence: tbc
+    - did: '1403'
+      data_length_bytes: 2
+      category: manufacturer
+      signals:
+      - name: APP1
+        scale: 0.0009765625
+        scale_expr: 1/1024
+        offset: 0.0
+        unit: V
+        meaning: Accelerator pedal position sensor 1 [V]
+        confidence: guess
+    - did: '16E8'
+      data_length_bytes: 2
+      category: manufacturer
+      signals:
+      - name: ALTF
+        meaning: Generator field current control duty signal [%]
+        confidence: tbc
+    - did: '16E9'
+      data_length_bytes: 2
+      category: manufacturer
+      signals:
+      - name: ALTT_V
+        meaning: Generator output voltage [V]
+        confidence: tbc
+    - did: '1985'
+      data_length_bytes: 1
+      category: manufacturer
+      signals:
+      - name: M_GEAR
+        meaning: Manual Gear Position - Calculated [--] / Neutral/1/2/3/4/5/6/R/Undefined/Auto/In Progress/YSF/YSF/YSF/Error
+        confidence: tbc
+    - did: '1E03'
+      data_length_bytes: 5
+      category: manufacturer
+      bit_encoded: true
+      signals:
+      - name: CPP/PNP
+        meaning: Clutch Pedal Position Switch / Neutral Switch Circuit [On/Off]
+        confidence: tbc
+    - did: '1E04'
+      data_length_bytes: 5
+      category: manufacturer
+      bit_encoded: true
+      signals:
+      - name: CLU_SW
+        meaning: Clutch switch [On/Off] / detected at the pedal’s initial travel for throttle control
+        confidence: tbc
+      - name: CPP
+        meaning: Clutch Pedal Position Switch [On/Off]
+        confidence: tbc
+      - name: INGEAR
+        meaning: in gear [Off/On]
+        confidence: tbc
+      - name: REV_SW
+        meaning: Reverse switch [Off/On]
+        confidence: tbc
+    - did: '2B00'
+      data_length_bytes: 5
+      category: manufacturer
+      bit_encoded: true
+      signals:
+      - name: BOO
+        meaning: 'Brake Switch 1 Input Signal Statis: Footbrake Is Applied High / Not Applied Low'
+        confidence: tbc
+      - name: BPA
+        meaning: 'Brake Switch 2 Input Signal Statis: Footbrake Is Applied High / Not Applied Low'
+        confidence: tbc
+    - did: '4133'
+      data_length_bytes: 4
+      category: manufacturer
+      bit_encoded: true
+      signals:
+      - name: FP
+        meaning: Fuel pump [Off/On]
+        confidence: tbc
+    - did: '61A5'
+      data_length_bytes: 4
+      category: manufacturer
+      signals:
+      - name: MIL
+        meaning: Malfunction Indicator Lamp [Off/On]
+        confidence: tbc
+    - did: '9800'
+      data_length_bytes: 2
+      category: manufacturer
+      signals:
+      - name: AC_PRESS_V
+        scale: 0.0009765625
+        scale_expr: 1/1024
+        offset: 0.0
+        unit: V
+        meaning: A/C Pressure Sensor [V]
+        confidence: guess
+    - did: 'D900'
+      data_length_bytes: 1
+      category: manufacturer
+      signals:
+      - name: TEST
+        meaning: TEN Terminal (Data Link Connector) [Off/On]
+        confidence: tbc
+    - did: 'D981'
+      data_length_bytes: 4
+      category: manufacturer
+      signals:
+      - name: ISC_FBK
+        meaning: ISC Feedback [%]
+        confidence: tbc
+      - name: ISC_FBK_LRN
+        meaning: ISC Feedback (Learned) [%]
+        confidence: tbc
+    - did: 'DA01'
+      data_length_bytes: 1
+      category: manufacturer
+      signals:
+      - name: ABV_OIL_P
+        meaning: ABV Oil Pressure [On/Off]
+        confidence: tbc
+      - name: OIL_P_SOL
+        meaning: Oil Pressure Solenoind Valve [Off/On]
+        confidence: tbc
+      - name: VEV_OIL_P
+        meaning: VEV Oil Pressure [Off/On]
+        confidence: tbc
+    - did: 'DA93'
+      data_length_bytes: 1
+      category: manufacturer
+      signals:
+      - name: ALT_CUR_DSD
+        meaning: Alternator Current Desired [A]
+        confidence: tbc
+    - did: 'DA99'
+      data_length_bytes: 2
+      category: manufacturer
+      signals:
+      - name: FIA
+        meaning: Fuel Injection Amount [mg/Cylinder]
+        confidence: tbc
+    - did: 'DD00'
+      data_length_bytes: 4
+      category: manufacturer
+      signals:
+      - name: (unnamed)
+        scale: 0.1
+        offset: 0.0
+        unit: sec
+        meaning: TOTAL_TIME [sec]
+        confidence: guess
+    - did: 'DD01'
+      data_length_bytes: 3
+      category: manufacturer
+      signals:
+      - name: TOTAL_DIST
+        scale: 1.0
+        offset: 0.0
+        unit: km
+        meaning: Total Distance [km]
+        confidence: guess
+    - did: 'F402'
+      data_length_bytes: 2
+      category: obd_standard
+      signals:
+      - name: DTC
+        meaning: DTC That Caused Required Snapshot Data Storage
+        confidence: tbc
+    - did: 'F403'
+      data_length_bytes: 2
+      category: obd_standard
+      signals:
+      - name: FUELSYS
+        meaning: Fuel System Status (Ope/Closed Loop) [--] / Open Loop / Closed Loop / OL-Drive / OL-Fault
+          / CL-Fault
+        confidence: tbc
+    - did: 'F404'
+      data_length_bytes: 1
+      category: obd_standard
+      signals:
+      - name: LOAD
+        meaning: Calculated Load Value [%] / This parameter indicates engine load and is calculated by
+          dividing current air flow by peak air flow. (Need verify)
+        confidence: tbc
+    - did: 'F405'
+      data_length_bytes: 1
+      category: obd_standard
+      signals:
+      - name: ECT
+        scale: 1.0
+        offset: -40.0
+        unit: degC
+        meaning: Engine coolant temperature [degC]
+        confidence: guess
+    - did: 'F406'
+      data_length_bytes: 1
+      category: obd_standard
+      signals:
+      - name: SHRTFT1
+        meaning: Short term fuel trim 1 [%]
+        confidence: tbc
+    - did: 'F407'
+      data_length_bytes: 1
+      category: obd_standard
+      signals:
+      - name: LONGFT1
+        meaning: Long Term Fuel Trim 1 [%]
+        confidence: tbc
+    - did: 'F40B'
+      data_length_bytes: 1
+      category: obd_standard
+      signals:
+      - name: MAP
+        scale: 1.0
+        offset: 0.0
+        unit: kPa
+        meaning: Manifold absolute pressure sensor [kPa]
+        confidence: guess
+    - did: 'F40C'
+      data_length_bytes: 2
+      category: obd_standard
+      signals:
+      - name: RPM
+        meaning: Engine Revolutions Per Minute [rpm]
+        confidence: tbc
+    - did: 'F40D'
+      data_length_bytes: 1
+      category: obd_standard
+      signals:
+      - name: VSS
+        meaning: Vehicle Speed [km/h]
+        confidence: tbc
+    - did: 'F40E'
+      data_length_bytes: 1
+      category: obd_standard
+      signals:
+      - name: SPARKADV
+        meaning: Spark Advance [deg]
+        confidence: tbc
+    - did: 'F40F'
+      data_length_bytes: 1
+      category: obd_standard
+      signals:
+      - name: IAT
+        scale: 1.0
+        offset: -40.0
+        unit: degC
+        meaning: Intake Air Temperature No.1 [degC] / Same as IAT11. / IAT sensor No.1 is integrated with
+          the MAF sensor unit (SAE J2716 SENT)
+        confidence: guess
+    - did: 'F410'
+      data_length_bytes: 1
+      category: obd_standard
+      signals:
+      - name: MAF
+        meaning: Mass Air Flow [g/s]
+        confidence: tbc
+    - did: 'F411'
+      data_length_bytes: 1
+      category: obd_standard
+      signals:
+      - name: TP
+        start_byte: 0
+        start_bit: 0
+        bit_length: 8
+        signed: false
+        scale: 0.3921568627
+        scale_expr: 100/255
+        offset: 0.0497
+        unit: '%'
+        meaning: Throttle Position [%]
+        confidence: measured
+        r2: 0.99984
+    - did: 'F415'
+      data_length_bytes: 2
+      category: obd_standard
+      signals:
+      - name: O2S12.VOLT
+        meaning: Heated Exhaust Gas Oxygen Sensor (bank1, sensor2) [V]
+        confidence: tbc
+    - did: 'F41F'
+      data_length_bytes: 2
+      category: obd_standard
+      signals:
+      - name: RUNTM
+        meaning: Time Since Engine Start [s]
+        confidence: tbc
+    - did: 'F421'
+      data_length_bytes: 2
+      category: obd_standard
+      signals:
+      - name: MIL_DIST
+        meaning: The distance travelled since the MIL was activated. [km]
+        confidence: tbc
+    - did: 'F423'
+      data_length_bytes: 2
+      category: obd_standard
+      signals:
+      - name: FRP
+        scale: 10.0
+        offset: 0.0
+        unit: kPa
+        meaning: Fuel Rail Pressure [kPa]
+        confidence: guess
+    - did: 'F42E'
+      data_length_bytes: 1
+      category: obd_standard
+      signals:
+      - name: (unnamed)
+        meaning: Commanded Evaporative Purge [%]
+        confidence: tbc
+    - did: 'F42F'
+      data_length_bytes: 1
+      category: obd_standard
+      signals:
+      - name: FLI
+        scale: 0.00392156862745098
+        scale_expr: 1/255
+        offset: 0.0
+        unit: '%'
+        meaning: Fuel Level [%] / This parameter indicates the percentage of fuel in tthe tank. The fuel
+          level must be netween 15%-85% fo rcars, 30%-85% for trucks to start the EVAP leak check.
+        confidence: guess
+    - did: 'F430'
+      data_length_bytes: 1
+      category: obd_standard
+      signals:
+      - name: WARM_UPS
+        meaning: Number Of Warm-ups Since DTCs Cleared [--]
+        confidence: tbc
+    - did: 'F431'
+      data_length_bytes: 2
+      category: obd_standard
+      signals:
+      - name: CLR_DIST
+        meaning: Distance Since diagnostic trouble codes cleared [km]
+        confidence: tbc
+    - did: 'F433'
+      data_length_bytes: 1
+      category: obd_standard
+      signals:
+      - name: BARO
+        scale: 1.0
+        offset: 0.0
+        unit: kPa
+        meaning: Barometric pressure [kPa]
+        confidence: guess
+    - did: 'F434'
+      data_length_bytes: 4
+      category: obd_standard
+      signals:
+      - name: EQ_RAT11
+        meaning: Equivalence Ratio (Lambda)(Bank1, Sensor 1) [--]
+        confidence: tbc
+      - name: O2S11_CUR
+        meaning: Exhaust Gas Oxygen Sensor Current Bank 1 Sensor 1 [mA]
+        confidence: tbc
+    - did: 'F43C'
+      data_length_bytes: 2
+      category: obd_standard
+      signals:
+      - name: CATEMP11
+        meaning: Catalyst Temperature Bank 1, Sensor 1 [degC]
+        confidence: tbc
+    - did: 'F441'
+      data_length_bytes: 5
+      category: obd_standard
+      bit_encoded: true
+      signals:
+      - name: CL_NMHC_MN_CP
+        meaning: Catalyst monitoring completed / NMHC catalyst monitoring completed [Yes/No]
+        confidence: tbc
+      - name: CMP_MNT_ENA
+        meaning: Comprehensive component monitoring enabled [Yes/No]
+        confidence: tbc
+      - name: CMP3_MNT
+        meaning: Comprehensive component monitoring completed [Yes/No]
+        confidence: tbc
+      - name: CP_IGN_SP
+        meaning: Compression ignition monitoring supported [Yes/No]
+        confidence: tbc
+      - name: CTLY_NMHC_MN
+        meaning: Catalyst monitoring / NMHC catalyst monitoring [Yes/No]
+        confidence: tbc
+      - name: EGR_VVT_MNT
+        meaning: EGR and/or VVT system monitoring [No/Yes]
+        confidence: tbc
+      - name: EGR_VVT_MN_CP
+        meaning: EGR and/or VVT system monitoring completed [Yes/No]
+        confidence: tbc
+      - name: EVAP_SYS_MN
+        meaning: Evaporative system monitoring [No/Yes]
+        confidence: tbc
+      - name: EVAP_SYS_MN_CP
+        meaning: Evaporative system monitoring completed [Yes/No]
+        confidence: tbc
+      - name: FU_SYS_CP
+        meaning: Fuel system monitoring completed [Yes/No]
+        confidence: tbc
+      - name: FU_SYS_ENA
+        meaning: Fuel system monitoring enabled [Yes/No]
+        confidence: tbc
+      - name: MSF_CP
+        meaning: Misfire monitoring completed [Yes/No]
+        confidence: tbc
+      - name: MSF_ENA
+        meaning: Misfire monitoring enabled [Yes/No]
+        confidence: tbc
+      - name: O2_SH_PM_F
+        meaning: Oxygen sensor heater monitoring / PM filter monitoring [No/Yes]
+        confidence: tbc
+      - name: O2_SH_PM_F_CP
+        meaning: Oxygen sensor heater monitoring completed / PM filter monitoring completed [Yes/No]
+        confidence: tbc
+      - name: O2_SM_EGSM
+        meaning: Oxygen sensor monitoring / Exhaust gas sensor monitoring [No/Yes]
+        confidence: tbc
+      - name: O2_SM_EGSM_CP
+        meaning: Oxygen sensor monitoring completed / Exhaust gas sensor monitoring completed [Yes/No]
+        confidence: tbc
+    - did: 'F442'
+      data_length_bytes: 2
+      category: obd_standard
+      signals:
+      - name: VPWR
+        scale: 0.001
+        scale_expr: 1/1000
+        offset: 0.0
+        unit: V
+        meaning: Control Module Voltage [V]
+        confidence: guess
+    - did: 'F443'
+      data_length_bytes: 2
+      category: obd_standard
+      signals:
+      - name: LOAD_ABS
+        meaning: Absolute Load Value [%] / This parameter indicates engine load and is calculated by dividing
+          current air flow by peak air flow. (Need verify)
+        confidence: tbc
+    - did: 'F444'
+      data_length_bytes: 2
+      category: obd_standard
+      signals:
+      - name: EQRAT11_CMD
+        scale: 3.0517578125e-05
+        scale_expr: 1/32768
+        offset: 0.0
+        unit: null
+        meaning: Commanded Equivalence Ratio (Air to Fuel Mixture) Bank 1 [--] / Ratio vs 14.7 = Stoichiometric
+          Air-Fuel Ratio
+        confidence: guess
+    - did: 'F445'
+      data_length_bytes: 1
+      category: obd_standard
+      signals:
+      - name: TP_REL
+        start_byte: 0
+        start_bit: 0
+        bit_length: 8
+        signed: false
+        scale: 0.3921568627
+        scale_expr: 100/255
+        offset: 0.0379
+        unit: '%'
+        meaning: Relative Throttle Position [%]
+        confidence: measured
+        r2: 0.99986
+    - did: 'F447'
+      data_length_bytes: 1
+      category: obd_standard
+      signals:
+      - name: TPB
+        start_byte: 0
+        start_bit: 0
+        bit_length: 8
+        signed: false
+        scale: 0.3921568627
+        scale_expr: 100/255
+        offset: 0.0456
+        unit: '%'
+        meaning: Throttle Position Sensor 2 [%]
+        confidence: measured
+        r2: 0.99987
+    - did: 'F449'
+      data_length_bytes: 1
+      category: obd_standard
+      signals:
+      - name: APP_D
+        start_byte: 0
+        start_bit: 0
+        bit_length: 8
+        signed: false
+        scale: 0.3921568627
+        scale_expr: 100/255
+        offset: 0.0354
+        unit: '%'
+        meaning: Accelerator pedal position sensor D [%]
+        confidence: measured
+        r2: 0.99986
+    - did: 'F44A'
+      data_length_bytes: 1
+      category: obd_standard
+      signals:
+      - name: APP_E
+        start_byte: 0
+        start_bit: 0
+        bit_length: 8
+        signed: false
+        scale: 0.3921568627
+        scale_expr: 100/255
+        offset: 0.0186
+        unit: '%'
+        meaning: Accelerator pedal position sensor E [%]
+        confidence: measured
+        r2: 0.99986
+    - did: 'F44C'
+      data_length_bytes: 1
+      category: obd_standard
+      signals:
+      - name: TAC_PCT
+        start_byte: 0
+        start_bit: 0
+        bit_length: 8
+        signed: false
+        scale: 0.3921568627
+        scale_expr: 100/255
+        offset: 0.059
+        unit: '%'
+        meaning: Commanded Throttle Actuator Control [%]
+        confidence: measured
+        r2: 0.9998
+    - did: 'F451'
+      data_length_bytes: 1
+      category: obd_standard
+      signals:
+      - name: FUEL_TYPE
+        meaning: Type of fuel currently being utilized by the vehicle [--] / NONE / Gasoline / Methanol
+          / Ethanol / Diesel / Electronic
+        confidence: tbc
+    - did: 'F455'
+      data_length_bytes: 1
+      category: obd_standard
+      signals:
+      - name: SHRTFT12
+        meaning: Short Term Fuel Trim (Bank 1, Sensor 2) [%]
+        confidence: tbc
+    - did: 'F456'
+      data_length_bytes: 1
+      category: obd_standard
+      signals:
+      - name: LONGFT12
+        meaning: Long Term Fuel Trim (Bank 1,Sensor 2) [%]
+        confidence: tbc
+    - did: 'F459'
+      data_length_bytes: 2
+      category: obd_standard
+      signals:
+      - name: FRP_ABS
+        scale: 10.0
+        offset: 0.0
+        unit: kPa
+        meaning: Fuel Rail Pressure (Absolute) [kPa]
+        confidence: guess
+    - did: 'F45E'
+      data_length_bytes: 2
+      category: obd_standard
+      signals:
+      - name: FUEL_RATE
+        meaning: Engine Fuel Rage [L/hr]
+        confidence: tbc
+    - did: 'F462'
+      data_length_bytes: 1
+      category: obd_standard
+      signals:
+      - name: PRS_TRQ_ACT
+        meaning: Actual Engine - Percent Torque [%]
+        confidence: tbc
+    - did: 'F463'
+      data_length_bytes: 2
+      category: obd_standard
+      signals:
+      - name: ENG_REF_TRQ
+        scale: 1.0
+        offset: 0.0
+        unit: Nm
+        meaning: Engine Reference Torque [Nm]
+        confidence: guess
+    - did: 'F465'
+      data_length_bytes: 2
+      category: obd_standard
+      bit_encoded: true
+      signals:
+      - name: AXIO_G_S
+        meaning: Auxiliary Inputs / Outputs - Recommended Gear Supported [On/Off]
+        confidence: tbc
+      - name: AXIO_TG_V
+        meaning: Auxiliary Inputs / Outputs - Recommended transmission gear for current vehicle conditions
+          [On/Off]
+        confidence: tbc
+    - did: 'F467'
+      data_length_bytes: 3
+      category: obd_standard
+      bit_encoded: true
+      signals:
+      - name: ECT1_SUP
+        meaning: Engine Coolant Temperature Sensor 1 Supported [Yes/No] / - Typically Yes for all regions.
+        confidence: tbc
+      - name: ECT2_SUP
+        meaning: Engine Coolant Temperature Sensor 2 Supported [Yes/No] / - Typically Yes for North America.
+          No for most other regions.
+        confidence: tbc
+      - name: EN_CT1
+        meaning: Engine Coolant Temperature 1 [degC]
+        confidence: tbc
+      - name: EN_CT2
+        meaning: Engine Coolant Temperature 2 [degC]
+        confidence: tbc
+    - did: 'F468'
+      data_length_bytes: 7
+      category: obd_standard
+      bit_encoded: true
+      signals:
+      - name: IAT11
+        scale: 1.0
+        offset: -40.0
+        unit: degC
+        meaning: Intake Air Temperature Bank 1 Sensor 1 [degC] / intake air temperature **before** it
+          passes through the throttle body (just after passing the air cleaner) as basic information for
+          mainly determining the fuel injection amount.
+        confidence: guess
+      - name: IAT12
+        scale: 1.0
+        offset: -40.0
+        unit: degC
+        meaning: Intake Air Temperature Bank 1 Sensor 2 [degC] / intake air temperature **after** it passes
+          through the throttle body (in intake manifold) as basic information for mainly determining the
+          fuel injection amount.
+        confidence: guess
+      - name: IAT_SEN1_SUP
+        meaning: IAT Sensor1 (Bank1) Supported [No/Yes]
+        confidence: tbc
+      - name: IAT_SEN2_SUP
+        meaning: IAT Sensor2 (Bank1) Supported [No/Yes]
+        confidence: tbc
+    - did: 'F46D'
+      data_length_bytes: 11
+      category: obd_standard
+      signals:
+      - name: FRP_A
+        scale: 10.0
+        offset: 0.0
+        unit: kPa
+        meaning: Fuel Rail Pressure A [kPa]
+        confidence: guess
+      - name: FRP_A_CMD
+        scale: 10.0
+        offset: 0.0
+        unit: kPa
+        meaning: Commanded Fuel Rail Pressure A [kPa]
+        confidence: guess
+      - name: FRP_A_CMD_S
+        meaning: Commanded Fuel Rail Pressure A supported [No/Yes]
+        confidence: tbc
+      - name: FRP_A_S
+        meaning: Fuel Rail Pressure A supported [No/Yes]
+        confidence: tbc
+      - name: FRT_A
+        scale: 1.0
+        offset: -40.0
+        unit: degC
+        meaning: Fuel Rail Temperature A [degC]
+        confidence: guess
+      - name: FT_A_S
+        meaning: Fuel Rail Temperature A supported [No/Yes]
+        confidence: tbc
+    - did: 'F48E'
+      data_length_bytes: 1
+      category: obd_standard
+      signals:
+      - name: ENG_FRCTN_PER
+        meaning: Engine Friction - Percent Torque [%]
+        confidence: tbc
+    - did: 'F49D'
+      data_length_bytes: 4
+      category: obd_standard
+      signals:
+      - name: ENG_FEL_RAGE
+        meaning: Engine Fuel Rate [g/s]
+        confidence: tbc
+      - name: VEH_FEL_RATE
+        meaning: Vehicle Fuel Rate [gram/sec]
+        confidence: tbc
+    - did: 'F49E'
+      data_length_bytes: 2
+      category: obd_standard
+      signals:
+      - name: ENG_EXH_F_RATE
+        meaning: Engine Exhaust Flow Rate [kg/h]
+        confidence: tbc
+    - did: 'F4A4'
+      data_length_bytes: 4
+      category: obd_standard
+      signals:
+      - name: TM_GERT
+        meaning: Transmission Actual Gear Ratio [--]
+        confidence: tbc
+      - name: TM_GERT_SP
+        meaning: Transmission Actual Gear Ratio Supported [--]
+        confidence: tbc
+      - name: TM_GEST
+        meaning: Transmission Actual Gear Status [--]
+        confidence: tbc
+      - name: TM_GEST_SP
+        meaning: Transmission Actual Gear Status Supported [--]
+        confidence: tbc
+    - did: 'F4A6'
+      data_length_bytes: 4
+      category: obd_standard
+      signals:
+      - name: VEH_ODO
+        scale: 0.1
+        offset: 0.0
+        unit: km
+        meaning: Vehicle Odometer [km]
+        confidence: guess
+    - did: 'F816'
+      data_length_bytes: 32
+      category: obd_info
+      signals:
+      - name: FEO_ICC_LT
+        meaning: Fueled Engine Operation Ignition Cycle Counter (Lifetime) [--]
+        confidence: tbc
+      - name: FEO_ICC_R
+        meaning: Fueled Engine Operation Ignition Cycle Counter (Recent) [--]
+        confidence: tbc
+      - name: IG_CNT_LT
+        meaning: Ignition Counter (Lifetime) [--]
+        confidence: tbc
+      - name: IG_CNT_R
+        meaning: Ignition Counter (Recent) [--]
+        confidence: tbc
+      - name: TT_ERT_LT
+        scale: 1.0
+        offset: 0.0
+        unit: s
+        meaning: Total Engine Run Time (Lifetime) [s]
+        confidence: guess
+      - name: TT_ERT_R
+        scale: 1.0
+        offset: 0.0
+        unit: s
+        meaning: Total Engine Run Time (Recent) [s]
+        confidence: guess
+      - name: TT_IE_RT_LT
+        scale: 1.0
+        offset: 0.0
+        unit: sec
+        meaning: Total Idle Engine Run Time (Lifetime) [sec]
+        confidence: guess
+      - name: TT_IE_RT_R
+        scale: 1.0
+        offset: 0.0
+        unit: sec
+        meaning: Total Idle Engine Run Time (Recent) [sec]
+        confidence: guess
+    - did: 'F817'
+      data_length_bytes: 16
+      category: obd_info
+      signals:
+      - name: TT_DTRV_LT
+        scale: 0.1
+        offset: 0.0
+        unit: km
+        meaning: Total Distance Traveled (Lifetime) [km]
+        confidence: guess
+      - name: TT_DTRV_R
+        scale: 0.1
+        offset: 0.0
+        unit: km
+        meaning: Total Distance Traveled (Recent) [km]
+        confidence: guess
+      - name: TT_FCSM_LT
+        scale: 0.1
+        offset: 0.0
+        unit: Litre
+        meaning: Total Fuel Consumed (Lifetime) [Litre]
+        confidence: guess
+      - name: TT_FCSM_R
+        scale: 0.01
+        offset: 0.0
+        unit: Litre
+        meaning: Total Fuel Consumed (Recent) [Litre]
+        confidence: guess
+    - did: 'F818'
+      data_length_bytes: 16
+      category: obd_info
+      signals:
+      - name: EN_OENE_LT
+        scale: 0.1
+        offset: 0.0
+        unit: kWh
+        meaning: Engine Output Energy (Lifetime) [kWh]
+        confidence: guess
+      - name: EN_OENE_R
+        scale: 0.1
+        offset: 0.0
+        unit: kWh
+        meaning: Engine Output Energy (Recent) [kWh]
+        confidence: guess
+      - name: PKTC_ENE_LT
+        scale: 1.0
+        offset: 0.0
+        unit: null
+        meaning: Positive Kinetic Energy (Lifetime)(km/hr2)
+        confidence: guess
+      - name: PKTC_ENE_R
+        scale: 1.0
+        offset: 0.0
+        unit: null
+        meaning: Positive Kinetic Energy (Recent)(km/hr2)
+        confidence: guess
+    - did: 'F819'
+      data_length_bytes: 24
+      category: obd_info
+      signals:
+      - name: TT_CPS_AT_LT
+        scale: 1.0
+        offset: 0.0
+        unit: s
+        meaning: Total City Propulsion System Active Time (Lifetime) [s]
+        confidence: guess
+      - name: TT_CPS_AT_R
+        scale: 1.0
+        offset: 0.0
+        unit: s
+        meaning: Total City Propulsion System Active Time (Recent) [s]
+        confidence: guess
+      - name: TT_IPS_AT_LT
+        scale: 1.0
+        offset: 0.0
+        unit: sec
+        meaning: Total Idle Propulsion System Active Time (Lifetime) [sec]
+        confidence: guess
+      - name: TT_IPS_AT_R
+        scale: 1.0
+        offset: 0.0
+        unit: sec
+        meaning: Total Idle Propulsion System Active Time (Recent) [sec]
+        confidence: guess
+      - name: TT_PS_AT_LT
+        scale: 1.0
+        offset: 0.0
+        unit: sec
+        meaning: Total Propulsion System Active Time (Lifetime) [sec]
+        confidence: guess
+      - name: TT_PS_AT_R
+        scale: 1.0
+        offset: 0.0
+        unit: sec
+        meaning: Total Propulsion System Active Time (Recent) [sec]
+        confidence: guess
+  '0x2F':
+    name: InputOutputControlByIdentifier
+    dids:
+    - did: '03B9'
+      data_length_bytes: 2
+      category: io_control
+      signals:
+      - name: '03'
+        meaning: Variable Fan Duty Cycle [%]
+        confidence: tbc
+        control_parameter: '03'
+    - did: '099B'
+      data_length_bytes: 5
+      category: io_control
+      signals:
+      - name: '03'
+        meaning: Air Conditioning Compressor Cycling Switch
+        confidence: tbc
+        control_parameter: '03'

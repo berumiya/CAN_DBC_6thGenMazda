@@ -1,0 +1,424 @@
+meta:
+  ecu: BCMM
+  request_id: '0x726'
+  response_id: '0x72E'
+  dbc_message: OBD2_FBCM_BCMM
+  generated: '2026-07-15'
+services:
+  '0x22':
+    name: ReadDataByIdentifier
+    dids:
+    - did: 'D110'
+      data_length_bytes: 2
+      category: manufacturer
+      signals:
+      - name: VPWR
+        meaning: Module Supply Voltage [V]
+        confidence: tbc
+    - did: 'DA00'
+      data_length_bytes: 1
+      category: manufacturer
+      bit_encoded: true
+      signals:
+      - name: ABK_HD_CS_R
+        meaning: Control Signal of Answerback Hazard (Remote Engine Start) [Off/On]
+        confidence: tbc
+      - name: HAZARD_SW
+        meaning: Hazard Switch
+        confidence: tbc
+      - name: PNC_HD_CS_R
+        meaning: Control Signal of Panic Hazard (Remote Engine Start) [Off/On]
+        confidence: tbc
+      - name: TURN_SW
+        meaning: Turn Switch [Off/R/L/Unknown]
+        confidence: tbc
+    - did: 'DA01'
+      data_length_bytes: 1
+      category: manufacturer
+      bit_encoded: true
+      signals:
+      - name: F_FOG_SW
+        meaning: Front Fog Switch [Off/On]
+        confidence: tbc
+      - name: H/L_SW_HI
+        meaning: Headlight Switch (HI)
+        confidence: tbc
+      - name: H/L_SW_LOW
+        meaning: Headlight Switch (LOW)
+        confidence: tbc
+      - name: H/L_SW_OFF
+        meaning: Headlight Switch (OFF)
+        confidence: tbc
+      - name: H/L_SW_PASS
+        meaning: Headlight Switch (PASS)
+        confidence: tbc
+      - name: H/L_SW_TNS
+        meaning: Headlight Switch (TNS)
+        confidence: tbc
+      - name: R_FOG_SW
+        meaning: Rear Fog Switch [Off/On]
+        confidence: tbc
+    - did: 'DA02'
+      data_length_bytes: 2
+      category: manufacturer
+      signals:
+      - name: WASHER_F_SW
+        meaning: Front Washer Switch [Off/On]
+        confidence: tbc
+      - name: WASHER_R_SW
+        meaning: Rear Washer Switch [Off/On]
+        confidence: tbc
+      - name: WIP_F_INT_L
+        scale: 1.0
+        offset: 0.0
+        unit: '%'
+        meaning: Front Wiper INT Level [%]
+        confidence: guess
+      - name: WIP_F_SW
+        meaning: Front Wiper Switch [Off/Low/Hi/INT(Auto)]
+        confidence: tbc
+      - name: WIP_R_SW
+        meaning: Rear Wiper Switch [Off/Low/INT]
+        confidence: tbc
+    - did: 'DA05'
+      data_length_bytes: 1
+      category: manufacturer
+      signals:
+      - name: BRK_F_L_SW
+        meaning: Brake Fluid Level Switch [Off(Normal)/On(Low)]
+        confidence: tbc
+      - name: IG1_STATUS
+        meaning: Ignition Status [IG-Off/IG-On]
+        confidence: tbc
+      - name: WASHER_FLD
+        meaning: Washer Fluid Level [Off(Normal)/On(Low)]
+        confidence: tbc
+    - did: 'DA72'
+      data_length_bytes: 1
+      category: manufacturer
+      signals:
+      - name: SEAT_B_2C
+        meaning: Seat Belt Status (Row 2 Center) [Unbuckled/Buckled]
+        confidence: tbc
+      - name: SEAT_B_2L
+        meaning: Seat Belt Status (Row 2 Left Side) [Unbuckled/Buckled]
+        confidence: tbc
+      - name: SEAT_B_2R
+        meaning: Seat Belt Status (Row 2 Right Side) [Unbuckled/Buckled]
+        confidence: tbc
+      - name: SEAT_B_3C
+        meaning: Seat Belt Status (Row 3 Center) [Unbuckled/Buckled]
+        confidence: tbc
+      - name: SEAT_B_3L
+        meaning: Seat Belt Status (Row 3 Left Side) [Unbuckled/Buckled]
+        confidence: tbc
+      - name: SEAT_B_3R
+        meaning: Seat Belt Status (Row 3 Right Side) [Unbuckled/Buckled]
+        confidence: tbc
+    - did: 'DA73'
+      data_length_bytes: 3
+      category: manufacturer
+      signals:
+      - name: C_DL_SW_LK
+        meaning: Central Door Lock Switch (Lock Side) [Off/On]
+        confidence: tbc
+      - name: C_DL_SW_UNL
+        meaning: Central Door Lock Switch (Unlock Side) [Off/On]
+        confidence: tbc
+      - name: DOOR_ALL
+        meaning: Open and Close Status of All Side Door by Door Switch [Close/Open]
+        confidence: tbc
+      - name: DOOR_D
+        meaning: Open and Close Status of Driver's Door by Door Switch [Close/Open]
+        confidence: tbc
+      - name: DOOR_P
+        meaning: Open and Close Status of Passenger's Door by Door Switch [Close/Open]
+        confidence: tbc
+      - name: DOOR_RR
+        meaning: Open and Close Status of Right Rear Door by Door Switch [Close/Open]
+        confidence: tbc
+      - name: DOOR_TL
+        meaning: Open and Close Status by TopLock Switch / (In the case of the Vehicle with 2-Door and
+          RHT) [Close/Open]
+        confidence: tbc
+      - name: HOOD
+        meaning: Open and Close Status of the Hood by Hood Switch
+        confidence: tbc
+      - name: KC_SW_D_LK
+        meaning: Driver Side Key Cylinder Switch (Lock Side) [Off/On]
+        confidence: tbc
+      - name: KC_SW_D_UNL
+        meaning: Driver Side Key Cylinder Switch (Unlock Side) [Off/On]
+        confidence: tbc
+      - name: LL_SW_D_LK
+        meaning: Driver Side Door Lock Link Switch (Lock Side) [Off/On]
+        confidence: tbc
+      - name: LL_SW_D_UNL
+        meaning: Driver Side Door Lock Link Switch (Unlock Side) [Off/On]
+        confidence: tbc
+      - name: LL_SW_P/R
+        meaning: Passenger / Rear Side Door Lock Link Switch (Unlock Side) [Off/On]
+        confidence: tbc
+      - name: TRUNK
+        meaning: Open and Close Status of Trunk/Liftgate by Trunk/Liftgate Latch Switch [Close/Open]
+        confidence: tbc
+      - name: TR_UNL_SW
+        meaning: Input Status of Trunk/Liftgate Opener Switch [Off/On]
+        confidence: tbc
+      - name: TR_UNL_SW_IP
+        meaning: Input Status of Trunk Opener Switch on Instrument Panel [Off/On]
+        confidence: tbc
+    - did: 'DA74'
+      data_length_bytes: 1
+      category: manufacturer
+      signals:
+      - name: DR_LK_RY
+        meaning: Control Request of Door Lock Relay to ESU [Off/On]
+        confidence: tbc
+      - name: DR_UNLK_RY
+        meaning: Control Request of Door Unlock Relay to ESU [Off/On]
+        confidence: tbc
+      - name: TRUNK_MOTOR
+        meaning: Control Request of Trunk/Liftgate Electric Latch Motor to ESU [Off/On]
+        confidence: tbc
+    - did: 'DB20'
+      data_length_bytes: 1
+      category: manufacturer
+      signals:
+      - name: VPWR_B_H
+        meaning: Module Supply Voltage ( +B(HAZARD) ) [V]
+        confidence: tbc
+    - did: 'DB21'
+      data_length_bytes: 1
+      category: manufacturer
+      signals:
+      - name: BRAKE_SW
+        meaning: Control Status of Brake Pedal by Stop Lamp Switch [Off/On]
+        confidence: tbc
+      - name: STOP_LMP_IN
+        meaning: Stop Lamp Input [Off/On]
+        confidence: tbc
+    - did: 'DB22'
+      data_length_bytes: 1
+      category: manufacturer
+      signals:
+      - name: WIP_F_AS
+        meaning: Front Wiper Auto Stop Switch Status [P_Pos/Not_P_Pos]
+        confidence: tbc
+    - did: 'DB23'
+      data_length_bytes: 12
+      category: manufacturer
+      signals:
+      - name: FUEL_SEN_HM
+        meaning: Fuel Sensor Input Value (Main Gauge / Hall IC Type) [V]
+        confidence: tbc
+      - name: FUEL_SEN_HS
+        meaning: Fuel Sensor Input Value (Sub Gauge / Hall IC Type) [V]
+        confidence: tbc
+      - name: FUEL_SEN_HV
+        meaning: Fuel Sensor Supply Voltage (Hall IC Type) [V]
+        confidence: tbc
+      - name: FUEL_SEN_M
+        meaning: Fuel Sensor Input (Main Gauge) [v]
+        confidence: tbc
+      - name: FUEL_SEN_S
+        meaning: Fuel Sensor Input (Sub Gauge) [V]
+        confidence: tbc
+      - name: FUEL_SEN_V
+        meaning: Fuel Sensor Supply Voltage [V]
+        confidence: tbc
+    - did: 'DB2A'
+      data_length_bytes: 1
+      category: manufacturer
+      signals:
+      - name: ABK_HN_CS_R
+        meaning: Control Signal of Answerback Horn (Remote Engine Start) [Off/On]
+        confidence: tbc
+      - name: PNC_HN_CS_R
+        meaning: Control Signal of Panic Horn (Remote Engine Start) [Off/On]
+        confidence: tbc
+    - did: 'DB2D'
+      data_length_bytes: 1
+      category: manufacturer
+      signals:
+      - name: STOP_LAMP_DSC
+        meaning: Stop Lamp Control Signal from DSC [Unknown/Off/On/BackupOn]
+        confidence: tbc
+    - did: 'DB2F'
+      data_length_bytes: 4
+      category: manufacturer
+      signals:
+      - name: H/L_CS_RLS
+        meaning: Control Signal of Head Light from Rain Light Sensor [Off/On]
+        confidence: tbc
+      - name: H/L_TNS_RLS
+        meaning: Control Signal of TNS Lamp from Rain Light Sensor
+        confidence: tbc
+    - did: 'DB30'
+      data_length_bytes: 2
+      category: manufacturer
+      signals:
+      - name: WIP_CS_RLS
+        meaning: Control Signal of Wiper from Rain Light Sensor [Off/SingleWipe/SpeedLow/SpeedHi/Failure]
+        confidence: tbc
+    - did: 'DB36'
+      data_length_bytes: 8
+      category: manufacturer
+      signals:
+      - name: AMBI_TEMP
+        meaning: Ambient temperature [degC]
+        confidence: tbc
+      - name: AMBI_TEMP_A
+        meaning: Availability of Ambient temperature [OK/NG]
+        confidence: tbc
+      - name: LIGHT_SEN
+        meaning: Light sensor
+        confidence: tbc
+      - name: LIGHT_SEN_A
+        meaning: Availability of Light sensor [OK/NG]
+        confidence: tbc
+      - name: REL_HUM
+        scale: 0.5
+        offset: 1.0
+        unit: '%'
+        meaning: Relative humidity from Rain Light Sensor [%]
+        confidence: guess
+      - name: REL_HUM_A
+        meaning: Availability of Relative humidity [OK/NG]
+        confidence: tbc
+      - name: WIN_TEM
+        meaning: Window surface temperature from Rain Light Sensor [degC]
+        confidence: tbc
+      - name: WIN_TEM_A
+        meaning: Availability of Windows surface temperature [OK/NG]
+        confidence: tbc
+    - did: 'DB3E'
+      data_length_bytes: 1
+      category: manufacturer
+      bit_encoded: true
+      signals:
+      - name: F_FOG_RELAY
+        meaning: Front Fog Relay [Off/On]
+        confidence: tbc
+    - did: 'DB3F'
+      data_length_bytes: 1
+      category: manufacturer
+      signals:
+      - name: TURN_L_L
+        meaning: Turn Light (Left) [Off/On]
+        confidence: tbc
+      - name: TURN_L_R
+        meaning: Turn Light (Right) [Off/On]
+        confidence: tbc
+    - did: 'DB40'
+      data_length_bytes: 1
+      category: manufacturer
+      signals:
+      - name: WIP_F_RY
+        meaning: Front Wiper Relay [Off/On]
+        confidence: tbc
+      - name: WIP_F_RY_HI
+        meaning: Front Wiper Relay (Hi) [Off/On]
+        confidence: tbc
+    - did: 'DB41'
+      data_length_bytes: 1
+      category: manufacturer
+      signals:
+      - name: H/L_CLN_RY
+        meaning: Head Light Cleaner Relay [Off/On]
+        confidence: tbc
+    - did: 'DB42'
+      data_length_bytes: 1
+      category: manufacturer
+      signals:
+      - name: BG_HORN_RLY
+        meaning: Burglar Horn Relay [Off/On]
+        confidence: tbc
+    - did: 'DB43'
+      data_length_bytes: 1
+      category: manufacturer
+      signals:
+      - name: HORN_RLY
+        meaning: Horn Relay [Off/On]
+        confidence: tbc
+    - did: 'DB44'
+      data_length_bytes: 1
+      category: manufacturer
+      signals:
+      - name: STOP_LMP_CTL
+        meaning: Stop Lamp Control [Off/On]
+        confidence: tbc
+    - did: 'DB45'
+      data_length_bytes: 2
+      category: manufacturer
+      signals:
+      - name: BLWR_RLY
+        meaning: Blower Motor Relay [Off/On]
+        confidence: tbc
+      - name: PTC_HEAT_ST
+        scale: 1.0
+        offset: 0.0
+        unit: '%'
+        meaning: PTC Heater Status [%]
+        confidence: guess
+      - name: R_DEF_RLY
+        meaning: Rear Defogger Relay [Off/On]
+        confidence: tbc
+    - did: 'DB5D'
+      data_length_bytes: 5
+      category: manufacturer
+      signals:
+      - name: H/L_DRL
+        meaning: DRL(Daytime Running Lamps) Control Request to ESU / Halogen_2Lights/Halogen_4Lights/Lo-HID+Hi-Halogen_4Lights/LED_4Lights/Bi-Xenon
+        confidence: tbc
+      - name: H/L_TYPE
+        meaning: Headlight Type Information to ESU
+        confidence: tbc
+      - name: H/L_PASS
+        meaning: Headlight Passing Control Request to ESU
+        confidence: tbc
+      - name: H/L_HI
+        meaning: Headlight Hi-Beam Control Request to ESU
+        confidence: tbc
+      - name: H/L_LOW
+        meaning: Headlight Lo-Beam Control Request to ESU
+        confidence: tbc
+      - name: H/L_TNS
+        meaning: TNS Control Request to ESU
+        confidence: tbc
+      - name: R_FOG_LAMP
+        meaning: Rear Fog Lamp [Off/On]
+        confidence: tbc
+    - did: 'DB5E'
+      data_length_bytes: 3
+      category: manufacturer
+      signals:
+      - name: VSPD
+        meaning: Vehicle Speed [km/h]
+        confidence: tbc
+      - name: WASHER_CTRL
+        meaning: Washer Control Request to ESU [Off/Front/Rear]
+        confidence: tbc
+      - name: WIP_R_CTRL
+        meaning: Rear Wiper Control Request to ESU [Off/INT/On/1Time/2Time/3Time/4Time]
+        confidence: tbc
+      - name: WIP_R_INT
+        meaning: Rear Wiper Intermittent Time [sec]
+        confidence: tbc
+    - did: 'DB5F'
+      data_length_bytes: 1
+      category: manufacturer
+      signals:
+      - name: ROOM_LMP
+        meaning: Control Request of Room Lamp to ESU [Off/100/60/50/40/30/20]
+        confidence: tbc
+      - name: TRUNK_LAMP
+        meaning: Control Request of Trunk/Cargo Compartment Light to ESU [Off/On]
+        confidence: tbc
+    - did: 'DB61'
+      data_length_bytes: 1
+      category: manufacturer
+      signals:
+      - name: REVERSE_LMP
+        meaning: Control Request of Reverse Lamp to ESU [Off/On]
+        confidence: tbc

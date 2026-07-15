@@ -1,0 +1,81 @@
+meta:
+  ecu: FSC
+  request_id: '0x706'
+  response_id: '0x70E'
+  dbc_message: OBD2_FSC
+  generated: '2026-07-15'
+services:
+  '0x22':
+    name: ReadDataByIdentifier
+    dids:
+    - did: '2032'
+      data_length_bytes: 9
+      category: manufacturer
+      signals:
+      - name: A_ANG_PITCH
+        meaning: Aiming Angle (Pitch)
+        confidence: tbc
+      - name: A_ANG_ROLL
+        meaning: Aiming Angle (Roll)
+        confidence: tbc
+      - name: A_ANG_YAW
+        meaning: Aiming Angle (Yaw)
+        confidence: tbc
+    - did: 'D111'
+      data_length_bytes: 1
+      category: manufacturer
+      signals:
+      - name: VPWR_IG1
+        scale: 0.1
+        offset: 0.0
+        unit: V
+        meaning: Module Supply Voltage (IG1) [V]
+        confidence: guess
+    - did: 'D9B0'
+      data_length_bytes: 6
+      category: manufacturer
+      signals:
+      - name: DSP_LANE_ST
+        meaning: Lane Display Status in Display
+        confidence: tbc
+      - name: DSP_WRN_ST
+        meaning: Warning Status in display
+        confidence: tbc
+      - name: HBC_H/L_CS
+        meaning: Control Signal of HBC Hi/Low Beam
+        confidence: tbc
+      - name: IL_ST_HBC
+        meaning: HBC Indicator Lamp Status
+        confidence: tbc
+      - name: IL_ST_LDWS
+        meaning: LDWS Indicator Lamp Status
+        confidence: tbc
+      - name: INH_LAS
+        meaning: LAS Inhibit Flag
+        confidence: tbc
+      - name: INH_SCBS
+        meaning: SCBS Inhibit Flag
+        confidence: tbc
+      - name: LDWS_BUZZER
+        meaning: LDWS Buzzer
+        confidence: tbc
+      - name: LDWS_SW
+        meaning: LDWS Switch
+        confidence: tbc
+      - name: RS_SOUND_CS
+        meaning: Control Signal of Rumble Strips Sound
+        confidence: tbc
+    - did: 'F40D'
+      data_length_bytes: 1
+      category: manufacturer
+      signals:
+      - name: VSS
+        meaning: Vehicle Speed
+        confidence: tbc
+    - did: 'FD47'
+      data_length_bytes: null
+      category: manufacturer
+      signals:
+      - name: C_SCORE
+        meaning: Cooling Score
+        confidence: tbc

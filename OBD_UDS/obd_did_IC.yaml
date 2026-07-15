@@ -1,0 +1,7 @@
+meta:
+  ecu: IC
+  request_id: '0x720'
+  response_id: '0x728'
+  dbc_message: OBD2_IC
+  generated: '2026-07-15'
+services: {}
