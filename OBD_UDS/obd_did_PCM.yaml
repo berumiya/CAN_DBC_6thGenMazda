@@ -3,7 +3,7 @@ meta:
   request_id: '0x7E0'
   response_id: '0x7E8'
   dbc_message: OBD2_PCM
-  generated: '2026-07-15'
+  generated: '2026-07-16'
 services:
   '0x22':
     name: ReadDataByIdentifier
@@ -114,17 +114,11 @@ services:
       category: manufacturer
       signals:
       - name: APP
-        start_byte: 0
-        start_bit: 0
-        bit_length: 8
-        signed: false
         scale: 0.5
-        scale_expr: 1/2
-        offset: 0.0365
+        offset: 0.0
         unit: '%'
         meaning: Accelerator Pedal Position [%]
-        confidence: measured
-        r2: 0.99983
+        confidence: guess
     - did: '034E'
       data_length_bytes: 2
       category: manufacturer
@@ -384,74 +378,39 @@ services:
       - name: IMTV
         meaning: Intake Manifold Tuning Valve [Off/On]
         confidence: tbc
-    - did: '0914'
-      data_length_bytes: 2
-      category: manufacturer
-      signals:
-      - name: APP1
-        start_byte: 0
-        start_bit: 0
-        bit_length: 16
-        byte_order: big
-        signed: false
-        scale: 0.0009765625
-        scale_expr: 1/1024
-        offset: 0
-        unit: V
-        meaning: Accelerator pedal position sensor 1 [V]
-        confidence: measured
-        r2: 0.99986
     - did: '0915'
       data_length_bytes: 2
       category: manufacturer
       signals:
       - name: APP2
-        start_byte: 0
-        start_bit: 0
-        bit_length: 16
-        byte_order: big
-        signed: false
         scale: 0.0009765625
         scale_expr: 1/1024
-        offset: -0.0027
+        offset: 0.0
         unit: V
         meaning: Accelerator pedal position sensor 2 [V]
-        confidence: measured
-        r2: 0.99985
+        confidence: guess
     - did: '0917'
       data_length_bytes: 2
       category: manufacturer
       signals:
       - name: TP1
-        start_byte: 0
-        start_bit: 0
-        bit_length: 16
-        byte_order: big
-        signed: false
         scale: 0.0009765625
         scale_expr: 1/1024
-        offset: 0.0072
+        offset: 0.0
         unit: V
         meaning: Throttle Position Sensor 1 [V]
-        confidence: measured
-        r2: 0.99988
+        confidence: guess
     - did: '0918'
       data_length_bytes: 2
       category: manufacturer
       signals:
       - name: TP2
-        start_byte: 0
-        start_bit: 0
-        bit_length: 16
-        byte_order: big
-        signed: false
         scale: 0.0009765625
         scale_expr: 1/1024
-        offset: 0.0035
+        offset: 0.0
         unit: V
         meaning: Throttle Position Sensor 2 [V]
-        confidence: measured
-        r2: 0.99988
+        confidence: guess
     - did: '091A'
       data_length_bytes: 2
       category: manufacturer
@@ -475,18 +434,12 @@ services:
       category: manufacturer
       signals:
       - name: ETC_ACT
-        start_byte: 0
-        start_bit: 0
-        bit_length: 16
-        byte_order: big
-        signed: false
         scale: 0.001953125
         scale_expr: 2/1024
-        offset: 0.0191
+        offset: 0.0
         unit: deg
         meaning: Electronic Throttle Control Actual angle [deg]
-        confidence: measured
-        r2: 0.9999
+        confidence: guess
     - did: '099B'
       data_length_bytes: 2
       category: manufacturer
@@ -791,17 +744,12 @@ services:
       category: obd_standard
       signals:
       - name: TP
-        start_byte: 0
-        start_bit: 0
-        bit_length: 8
-        signed: false
-        scale: 0.3921568627
-        scale_expr: 100/255
-        offset: 0.0497
+        scale: 0.00392156862745098
+        scale_expr: 1/255
+        offset: 0.0
         unit: '%'
         meaning: Throttle Position [%]
-        confidence: measured
-        r2: 0.99984
+        confidence: guess
     - did: 'F415'
       data_length_bytes: 2
       category: obd_standard
@@ -985,81 +933,48 @@ services:
       category: obd_standard
       signals:
       - name: TP_REL
-        start_byte: 0
-        start_bit: 0
-        bit_length: 8
-        signed: false
-        scale: 0.3921568627
-        scale_expr: 100/255
-        offset: 0.0379
+        scale: 0.00392156862745098
+        scale_expr: 1/255
+        offset: 0.0
         unit: '%'
         meaning: Relative Throttle Position [%]
-        confidence: measured
-        r2: 0.99986
+        confidence: guess
     - did: 'F447'
       data_length_bytes: 1
       category: obd_standard
       signals:
       - name: TPB
-        start_byte: 0
-        start_bit: 0
-        bit_length: 8
-        signed: false
-        scale: 0.3921568627
-        scale_expr: 100/255
-        offset: 0.0456
+        scale: 0.00392156862745098
+        scale_expr: 1/255
+        offset: 0.0
         unit: '%'
         meaning: Throttle Position Sensor 2 [%]
-        confidence: measured
-        r2: 0.99987
+        confidence: guess
     - did: 'F449'
       data_length_bytes: 1
       category: obd_standard
       signals:
       - name: APP_D
-        start_byte: 0
-        start_bit: 0
-        bit_length: 8
-        signed: false
-        scale: 0.3921568627
-        scale_expr: 100/255
-        offset: 0.0354
-        unit: '%'
         meaning: Accelerator pedal position sensor D [%]
-        confidence: measured
-        r2: 0.99986
+        confidence: tbc
     - did: 'F44A'
       data_length_bytes: 1
       category: obd_standard
       signals:
       - name: APP_E
-        start_byte: 0
-        start_bit: 0
-        bit_length: 8
-        signed: false
-        scale: 0.3921568627
-        scale_expr: 100/255
-        offset: 0.0186
-        unit: '%'
         meaning: Accelerator pedal position sensor E [%]
-        confidence: measured
-        r2: 0.99986
+        confidence: tbc
     - did: 'F44C'
       data_length_bytes: 1
       category: obd_standard
       signals:
       - name: TAC_PCT
-        start_byte: 0
-        start_bit: 0
-        bit_length: 8
-        signed: false
-        scale: 0.3921568627
-        scale_expr: 100/255
-        offset: 0.059
+        scale: 0.00392156862745098
+        scale_expr: 1/255
+        offset: 0.0
         unit: '%'
         meaning: Commanded Throttle Actuator Control [%]
-        confidence: measured
-        r2: 0.9998
+        confidence: guess
     - did: 'F451'
       data_length_bytes: 1
       category: obd_standard
