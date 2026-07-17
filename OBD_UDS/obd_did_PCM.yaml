@@ -118,8 +118,9 @@ services:
         start_bit: 0
         bit_length: 8
         signed: false
-        scale: 0.49412021
-        offset: 0.1505
+        scale: 0.5
+        scale_expr: 1/2
+        offset: 0
         unit: '%'
         meaning: Accelerator Pedal Position [%]
         confidence: measured
