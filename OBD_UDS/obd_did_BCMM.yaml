@@ -3,7 +3,7 @@ meta:
   request_id: '0x726'
   response_id: '0x72E'
   dbc_message: OBD2_FBCM_BCMM
-  generated: '2026-07-16'
+  generated: '2026-07-17'
 services:
   '0x22':
     name: ReadDataByIdentifier

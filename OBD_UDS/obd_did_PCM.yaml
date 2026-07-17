@@ -3,7 +3,7 @@ meta:
   request_id: '0x7E0'
   response_id: '0x7E8'
   dbc_message: OBD2_PCM
-  generated: '2026-07-16'
+  generated: '2026-07-17'
 services:
   '0x22':
     name: ReadDataByIdentifier
@@ -532,10 +532,22 @@ services:
       signals:
       - name: CLU_SW
         meaning: Clutch switch [On/Off] / detected at the pedal’s initial travel for throttle control
-        confidence: tbc
+        confidence: verified
+        start_byte: 2
+        start_bit: 7
+        bit_length: 1
+        signed: false
+        scale: 1
+        offset: 0
       - name: CPP
         meaning: Clutch Pedal Position Switch [On/Off]
-        confidence: tbc
+        confidence: verified
+        start_byte: 2
+        start_bit: 6
+        bit_length: 1
+        signed: false
+        scale: 1
+        offset: 0
       - name: INGEAR
         meaning: in gear [Off/On]
         confidence: tbc

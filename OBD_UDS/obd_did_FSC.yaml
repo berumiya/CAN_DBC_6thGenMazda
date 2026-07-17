@@ -3,7 +3,7 @@ meta:
   request_id: '0x706'
   response_id: '0x70E'
   dbc_message: OBD2_FSC
-  generated: '2026-07-16'
+  generated: '2026-07-17'
 services:
   '0x22':
     name: ReadDataByIdentifier
