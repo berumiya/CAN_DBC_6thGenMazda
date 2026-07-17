@@ -531,23 +531,23 @@ services:
       bit_encoded: true
       signals:
       - name: CLU_SW
-        meaning: Clutch switch [On/Off] / detected at the pedal’s initial travel for throttle control
-        confidence: verified
         start_byte: 2
         start_bit: 7
         bit_length: 1
         signed: false
         scale: 1
         offset: 0
+        meaning: Clutch switch [On/Off] / detected at the pedal’s initial travel for throttle control
+        confidence: measured
       - name: CPP
-        meaning: Clutch Pedal Position Switch [On/Off]
-        confidence: verified
         start_byte: 2
         start_bit: 6
         bit_length: 1
         signed: false
         scale: 1
         offset: 0
+        meaning: Clutch Pedal Position Switch [On/Off]
+        confidence: measured
       - name: INGEAR
         meaning: in gear [Off/On]
         confidence: tbc
