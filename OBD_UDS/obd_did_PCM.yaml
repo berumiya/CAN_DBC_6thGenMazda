@@ -114,11 +114,15 @@ services:
       category: manufacturer
       signals:
       - name: APP
-        scale: 0.5
-        offset: 0.0
+        start_byte: 0
+        start_bit: 0
+        bit_length: 8
+        signed: false
+        scale: 0.49412021
+        offset: 0.1505
         unit: '%'
         meaning: Accelerator Pedal Position [%]
-        confidence: guess
+        confidence: measured
     - did: '034E'
       data_length_bytes: 2
       category: manufacturer
