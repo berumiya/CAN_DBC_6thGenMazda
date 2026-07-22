@@ -353,7 +353,7 @@ BO_ 805 HS_EVP: 8 HS_EVP
 
 BO_ 976 HS_CMU: 8 HS_CMU
 
-BO_ 977 HS_CMU_MMmonth_Maybe: 8 HS_CMU
+BO_ 977 HS_CMU_MMmonth: 8 HS_CMU
    SG_ Date : 49|7@0+ (1,0) [0|1] "" Vector__XXX
    SG_ Mileage : 39|22@0+ (1,0) [0|1] "km" Vector__XXX
 
