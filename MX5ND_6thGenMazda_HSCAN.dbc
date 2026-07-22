@@ -74,6 +74,9 @@ BO_ 1416 HS_SSU: 8 HS_SSU
 BO_ 158 HS_IC: 8 HS_IC
    SG_ Fuel_Tank : 47|8@0+ (0.2,0) [0|1] "L" Vector__XXX
    SG_ Fuel_Related_2 : 55|8@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ DSC_OFF_Switch : 3|1@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ LDWS_ON_Switch : 8|1@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ BSM_RVM_ON_Switch : 9|1@0+ (1,0) [0|1] "" Vector__XXX
 
 BO_ 159 HS_IC: 8 HS_IC
    SG_ PCONSW_Panel_Light_Control_Switch : 15|8@0+ (1,0) [0|1] "%" Vector__XXX
@@ -143,6 +146,7 @@ BO_ 1147 HS_IC: 8 HS_IC
    SG_ BSM_Warning : 2|1@0+ (1,0) [0|1] "" Vector__XXX
    SG_ BSM_Right : 1|1@0+ (1,0) [0|1] "" Vector__XXX
    SG_ BSM_Left : 15|1@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ BSM_Status : 4|1@0+ (1,0) [0|1] "" Vector__XXX
 
 BO_ 1166 HS_IC_PSM_MZ: 8 HS_IC
 
@@ -185,6 +189,7 @@ BO_ 542 HS_ABS: 8 HS_ABS
 BO_ 736 HS_ABS: 8 HS_ABS
 
 BO_ 1045 HS_ABS: 8 HS_ABS
+   SG_ DSC_Status : 4|1@0+ (1,0) [0|1] "" Vector__XXX
 
 BO_ 1430 HS_ABS: 8 HS_ABS
 
@@ -219,6 +224,9 @@ BO_ 1163 HS_BCMM: 8 HS_BCMM
 BO_ 1409 HS_BCMM: 8 HS_BCMM
 
 BO_ 540 HS_FSC2_MRCC: 8 HS_FSC2
+   SG_ LDWS_Status1 : 0|1@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ LDWS_Status2 : 8|1@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ SCBS_SBS_Status : 7|1@0+ (1,0) [0|1] "" Vector__XXX
 
 BO_ 541 HS_FSC2: 8 HS_FSC2
 
@@ -239,6 +247,7 @@ BO_ 863 HS_FSC2: 8 HS_FSC2
 BO_ 1088 HS_FSC2: 8 HS_FSC2
 
 BO_ 1157 HS_FSC2: 8 HS_FSC2
+   SG_ SCBS_SBS_Status : 28|2@0+ (1,0) [0|1] "" Vector__XXX
 
 BO_ 1160 HS_FSC2: 8 HS_FSC2
 
@@ -493,11 +502,16 @@ VAL_ 628 Key_notfound 1 "Key_not_found" 0 "-";
 VAL_ 628 IC_Buzz 0 "No Description" 1 "P-P-" 2 "P-P-x3" 3 "PPx6";
 VAL_ 628 Key_Batt 1 "Key_Battery_is_low" 0 "-";
 VAL_ 628 Key_fob 5 "Lock" 6 "Unlock";
+VAL_ 158 DSC_OFF_Switch 0 "Not_Pressed" 1 "Pressed";
+VAL_ 158 LDWS_ON_Switch 0 "Not_Pressed" 1 "Pressed";
+VAL_ 158 BSM_RVM_ON_Switch 1 "Pressed" 0 "Not_Pressed";
 VAL_ 159 Parking_Brake 0 "Released" 1 "Applied";
 VAL_ 606 SpeedUnit 0 "km/h" 1 "mph";
 VAL_ 606 StopVehicle 0 "" 1 "Stop_Vehicle_at_safe_area";
 VAL_ 606 DAA_Related 6 "RecommendRest";
 VAL_ 1034 Central_Config_Index 49152 "C000" 49153 "C001" 49408 "C100" 49409 "C101" 49410 "C102" 49411 "C103" 49412 "C104" 48896 "BF00" 48897 "BF01" 48898 "BF02" 48899 "BF03" 48900 "BF04" 48901 "BF05" 48902 "BF06" 48903 "BF07" 48904 "BF08" 48905 "BF09" 48906 "BF0A" 48907 "BF0B" 48908 "BF0C" 48909 "BF0D" 48910 "BF0E" 48911 "BF0F" 48912 "BF10" 48913 "BF11" 48914 "BF12" 48915 "BF13" 48916 "BF14" 48917 "BF15" 48918 "BF16" 48919 "BF17" 48920 "BF18" 48921 "BF19" 48922 "BF1A" 48923 "BF1B" 48924 "BF1C" 48925 "BF1D" 48926 "BF1E" 48927 "BF1F" 48928 "BF20" 48929 "BF21";
+VAL_ 1147 BSM_Status 1 "On" 0 "Off";
+VAL_ 1045 DSC_Status 0 "Off" 1 "On";
 VAL_ 154 F_FOG_RELAY 1 "On" 0 "Off";
 VAL_ 154 Headlight 0 "Off" 2 "TNS" 3 "TNS_Lo" 12 "Hi" 0 "No Description";
 VAL_ 154 Turn 0 "Off" 2 "R" 1 "L" 3 "LR";
@@ -506,6 +520,10 @@ VAL_ 1086 R_FOG_LAMP 1 "On" 0 "Off";
 VAL_ 1086 Trunk 0 "Closed" 1 "Open";
 VAL_ 1086 DoorRight 0 "Closed" 1 "Ajar";
 VAL_ 1086 DoorLeft 0 "Closed" 1 "Ajar";
+VAL_ 540 LDWS_Status1 0 "Off" 1 "On";
+VAL_ 540 LDWS_Status2 0 "Off" 1 "On";
+VAL_ 540 SCBS_SBS_Status 0 "On" 1 "Off";
+VAL_ 1157 SCBS_SBS_Status 2 "On" 1 "Off";
 VAL_ 253 MAP_Manifold_absolute_pressure_sensor 257 "Invalid" 10 "10_or_below" 115 "115_or_higher";
 VAL_ 357 MT_Gear_Select 1 "InGear" 2 "Newtral";
 VAL_ 357 CC_Mode_Related 0 "OFF" 1 "ON";
