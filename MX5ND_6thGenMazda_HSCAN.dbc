@@ -515,7 +515,8 @@ VAL_ 1034 Central_Config_Index 49152 "C000" 49153 "C001" 49408 "C100" 49409 "C10
 VAL_ 1147 BSM_Status 1 "On" 0 "Off";
 VAL_ 1045 DSC_Status 0 "Off" 1 "On";
 VAL_ 154 F_FOG_RELAY 1 "On" 0 "Off";
-VAL_ 154 Headlight 0 "Off" 2 "TNS" 3 "TNS_Lo" 12 "Hi";
+VAL_ 154 Headlight 0 "Off" 2 "TNS" 3 "TNS_Lo" 12 "Hi";
+
 VAL_ 154 Turn 0 "Off" 2 "R" 1 "L" 3 "LR";
 VAL_ 154 PanelLight 0 "Day" 1 "Night";
 VAL_ 1086 R_FOG_LAMP 1 "On" 0 "Off";
@@ -527,7 +528,8 @@ VAL_ 540 LDWS_Status2 0 "Off" 1 "On";
 VAL_ 540 SCBS_SBS_Status 0 "On" 1 "Off";
 VAL_ 1157 SCBS_SBS_Status 2 "On" 1 "Off";
 VAL_ 253 MAP_Manifold_absolute_pressure_sensor 257 "Invalid" 10 "10_or_below" 115 "115_or_higher";
-VAL_ 357 MT_Gear_Select 1 "InGear" 2 "Neutral";
+VAL_ 357 MT_Gear_Select 1 "InGear" 2 "Neutral";
+
 VAL_ 357 CC_Mode_Related 0 "OFF" 1 "ON";
 VAL_ 357 CC_Mode_Related2 0 "OFF" 1 "ON";
 VAL_ 357 MT_Gear_Position 19 "N/1st" 11 "2nd" 7 "3rd" 6 "4th" 5 "5th" 3 "6th";
