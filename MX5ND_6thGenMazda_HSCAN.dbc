@@ -35,7 +35,7 @@ NS_ :
     SG_MUL_VAL_
 
 BS_: 
-BU_: HS_SSU HS_CMU_Maybe HS_BCMM HS_LVL HS_ABS HS_IC HS_RCM HS_EPAS HS_FSC2 HS_PCM HS_EVP HS_DCDC_Maybe HS_MRCC HS_HUD_MZ HS_RHT HS_TCUAT OBD2 LICENSE 
+BU_: HS_SSU HS_CMU HS_BCMM HS_LVL HS_ABS HS_IC HS_RCM HS_EPAS HS_FSC2 HS_PCM HS_EVP HS_DCDC HS_MRCC HS_HUD_MZ HS_RHT HS_TCUAT OBD2 LICENSE 
 BO_ 145 HS_SSU: 8 HS_SSU
    SG_ HAZ_SW : 10|1@0+ (1,0) [0|1] "" Vector__XXX
    SG_ WIP_F_INT : 55|8@0+ (1,0) [0|1] "" Vector__XXX
@@ -342,33 +342,33 @@ BO_ 284 HS_EPAS: 8 HS_EPAS
 BO_ 576 HS_EPAS: 8 HS_EPAS
    SG_ SteeringTorque_related : 7|16@0+ (1,0) [0|1] "" Vector__XXX
 
-BO_ 138 HS_DCDC_Maybe: 8 HS_DCDC_Maybe
+BO_ 138 HS_DCDC: 8 HS_DCDC
 
-BO_ 1243 HS_DCDC_Maybe: 8 HS_DCDC_Maybe
+BO_ 1243 HS_DCDC: 8 HS_DCDC
 
-BO_ 1247 HS_DCDC_Maybe: 8 HS_DCDC_Maybe
+BO_ 1247 HS_DCDC: 8 HS_DCDC
 
 BO_ 805 HS_EVP: 8 HS_EVP
    SG_ VS1_Vaccum_Sensor_1 : 7|12@0+ (0.1,0) [0|1] "kPa" Vector__XXX
 
-BO_ 976 HS_CMU_Maybe: 8 HS_CMU_Maybe
+BO_ 976 HS_CMU: 8 HS_CMU
 
-BO_ 977 HS_CMU_MMmonth_Maybe: 8 HS_CMU_Maybe
+BO_ 977 HS_CMU_MMmonth: 8 HS_CMU
    SG_ Date : 49|7@0+ (1,0) [0|1] "" Vector__XXX
    SG_ Mileage : 39|22@0+ (1,0) [0|1] "km" Vector__XXX
 
-BO_ 978 HS_CMU_Maybe: 8 HS_CMU_Maybe
+BO_ 978 HS_CMU: 8 HS_CMU
 
-BO_ 1171 HS_CMU_Maybe: 8 HS_CMU_Maybe
+BO_ 1171 HS_CMU: 8 HS_CMU
 
-BO_ 1266 HS_CMU_Maybe: 8 HS_CMU_Maybe
+BO_ 1266 HS_CMU: 8 HS_CMU
    SG_ HUD_Height : 27|12@0+ (1,0) [0|1] "" Vector__XXX
    SG_ HUD_Height_Moving : 28|1@0+ (1,0) [0|1] "" Vector__XXX
    SG_ HUD_Bright : 35|4@0+ (1,0) [0|1] "" Vector__XXX
 
-BO_ 1272 HS_CMU_Maybe: 8 HS_CMU_Maybe
+BO_ 1272 HS_CMU: 8 HS_CMU
 
-BO_ 1479 HS_CMU_Maybe: 8 HS_CMU_Maybe
+BO_ 1479 HS_CMU: 8 HS_CMU
 
 BO_ 539 HS_MRCC: 8 HS_MRCC
 
