@@ -77,6 +77,7 @@ BO_ 158 HS_IC: 8 HS_IC
    SG_ DSC_OFF_Switch : 3|1@0+ (1,0) [0|1] "" Vector__XXX
    SG_ LDWS_ON_Switch : 8|1@0+ (1,0) [0|1] "" Vector__XXX
    SG_ BSM_RVM_ON_Switch : 9|1@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ iStop_OFF_Switch : 2|1@0+ (1,0) [0|1] "" Vector__XXX
 
 BO_ 159 HS_IC: 8 HS_IC
    SG_ PCONSW_Panel_Light_Control_Switch : 15|8@0+ (1,0) [0|1] "%" Vector__XXX
@@ -505,6 +506,7 @@ VAL_ 628 Key_fob 5 "Lock" 6 "Unlock";
 VAL_ 158 DSC_OFF_Switch 0 "Not_Pressed" 1 "Pressed";
 VAL_ 158 LDWS_ON_Switch 0 "Not_Pressed" 1 "Pressed";
 VAL_ 158 BSM_RVM_ON_Switch 1 "Pressed" 0 "Not_Pressed";
+VAL_ 158 iStop_OFF_Switch 0 "Not_Pressed" 1 "Pressed";
 VAL_ 159 Parking_Brake 0 "Released" 1 "Applied";
 VAL_ 606 SpeedUnit 0 "km/h" 1 "mph";
 VAL_ 606 StopVehicle 0 "" 1 "Stop_Vehicle_at_safe_area";
